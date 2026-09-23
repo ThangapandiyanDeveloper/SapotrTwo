@@ -1,38 +1,41 @@
-# SAPOTR — landing page
+# SAPOTR — landing page for SAPOTRs
 
-Single-page marketing site for SAPOTR, an on-demand workforce platform for
-New Zealand businesses. Plain HTML, CSS and vanilla JavaScript — no framework,
-no build step. Open `index.html` and it runs.
+Single-page site inviting people to become SAPOTRs (workers) on NZ’s
+Last-Minute Staff Support Platform. Plain HTML, CSS and vanilla JavaScript — no
+framework, no build step, no dependencies.
 
 ## Structure
 
-    index.html      all ten sections, meta tags, FAQPage + LocalBusiness JSON-LD
-    styles.css      design tokens, layout, animation, responsive rules
-    script.js       booking console, scroll-scrubbed steps, reveals, carousel, FAQ
-    assets/         hero film, photography, logos, share image
+    index.html      hero (5 banners), benefits, work types, safety, quotes,
+                    growth, 3 steps, FAQ, CTA, footer · FAQPage + Organization JSON-LD
+    styles.css      tokens, sections in page order, responsive, reduced motion
+    script.js       hero carousel + Auckland map, reveals, count-up, tabs, FAQ
+    assets/img/     web-ready crops and cut-outs made from "New Sapotr Images"
 
 ## Local preview
 
-    python3 -m http.server 8000
+    python -m http.server 8000
 
-Then open <http://localhost:8000>. Opening the file directly with `file://`
-also works, but a local server matches how the video and images load in
-production.
+Then open <http://localhost:8000>.
 
-## Notes
+## How the hero works
 
-- Everything is one page. Every link is an in-page anchor, `mailto:` or `tel:`
-  — nothing navigates away.
-- Animation is gated behind `prefers-reduced-motion`; that path falls back to a
-  static, fully readable layout.
-- Hero video ships in two encodes: `hero.mp4` (1920×1080) and
-  `hero-mobile.mp4` (960×540, served under 720px wide).
+- Five stacked banners, one cross-dissolve. Auto-advances (7–8 s per banner,
+  11 s after a manual move); pauses on keyboard focus, drag, hovering the
+  controls, when off screen, when the tab is hidden, or with the pause button.
+- Swipe (touch or mouse drag), sideways trackpad scroll, arrows, dots, and
+  ←/→/Home/End all navigate. With reduced motion there is no autoplay.
+- Banner 1 is a drawn SVG of Auckland — no map API, no key. Pins sit on real
+  suburbs; cards are placed around their pin only where they do not cover the
+  copy, button or controls (`CARDS` / `PINS` in `script.js`).
 
-## Before launch
+## Assets
 
-- Testimonials are placeholders written against stock portraits. Replace with
-  real, attributable customer quotes.
-- The stat figures and the "4.9 average rating" line are unverified marketing
-  numbers. Confirm or change them.
-- Stock media comes from Pexels and Coverr. Confirm the licence terms for each
-  asset before commercial use.
+`assets/img/` is generated from the client’s `assets/New Sapotr Images`:
+flat-background mascot shots were cut out to transparent WebP (cropped above
+the shoes, which share the background colour), and the screenshot-style
+banners were cropped to remove the carousel arrows baked into them.
+WA0010 is unused because it shows a real hotel brand’s logo.
+
+Events, Moving and Cleaning use Brand2’s earlier photos, as no new image
+covers those categories.

@@ -1,41 +1,91 @@
 <!DOCTYPE html>
-<html lang="en-NZ">
+<html lang="en-NZ" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SAPOTR — Need an Extra Employee? Just Tap.</title>
-<meta name="description" content="SAPOTR is New Zealand's on-demand workforce platform. Book verified employees for short-term, one-day and same-day work — flat-rate pricing, pay for work time, no agencies.">
+<script>document.documentElement.className='js';</script>
+<title>SAPOTR — Receive Work. Accept. Complete. Earn. Repeat.</title>
+<meta name="description" content="Get multiple casual work opportunities from businesses near you. Become a SAPOTR — NZ’s Last-Minute Staff Support Platform.">
 <link rel="canonical" href="https://www.sapotr.co.nz/">
 <meta name="theme-color" content="#0F1738">
 <meta name="robots" content="index,follow,max-image-preview:large">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SAPOTR">
-<meta property="og:title" content="SAPOTR — Need an Extra Employee? Just Tap.">
-<meta property="og:description" content="Book verified people when you need extra hands for everyday work.">
+<meta property="og:title" content="SAPOTR — Receive Work. Accept. Complete. Earn. Repeat.">
+<meta property="og:description" content="Get multiple casual work opportunities from businesses near you.">
 <meta property="og:url" content="https://www.sapotr.co.nz/">
-<meta property="og:image" content="https://www.sapotr.co.nz/assets/og-image.jpg">
+<meta property="og:image" content="https://www.sapotr.co.nz/assets/og-sapotr.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_NZ">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SAPOTR — Need an Extra Employee? Just Tap.">
-<meta name="twitter:description" content="Book verified people when you need extra hands for everyday work.">
-<meta name="twitter:image" content="https://www.sapotr.co.nz/assets/og-image.jpg">
+<meta name="twitter:title" content="SAPOTR — Receive Work. Accept. Complete. Earn. Repeat.">
+<meta name="twitter:description" content="Get multiple casual work opportunities from businesses near you.">
+<meta name="twitter:image" content="https://www.sapotr.co.nz/assets/og-sapotr.jpg">
 
 <link rel="icon" href="assets/logo-mark.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Josefin+Sans:wght@600&family=Marcellus&family=Oswald:wght@500&family=Pacifico&family=Playfair+Display:ital,wght@1,700&family=Quicksand:wght@600&family=Roboto+Slab:wght@600&family=Saira+Condensed:wght@700&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/hero-poster.jpg" media="(min-width: 681px)">
-<link rel="preload" as="image" href="assets/hero-poster-mobile.jpg" media="(max-width: 680px)">
+<!-- the ticker's one-typeface-per-trade faces, subset to the letters the category names use -->
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Josefin+Sans:wght@600&family=Oswald:wght@500&family=Pacifico&family=Playfair+Display:ital,wght@1,700&family=Quicksand:wght@600&family=Roboto+Slab:wght@600&family=Saira+Condensed:wght@700&display=swap&text=%20%26ABCDEFGHIJKLMNOPQRSTUVWXYZacdeghilmnoprstuvy" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<noscript><style>.wt-panel[hidden]{display:block}.wt-panel+.wt-panel{border-top:1px solid #e7e9f1}</style></noscript>
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ══════════ Icon sprite ══════════ -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5.5v13M15 5.5v13"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0113 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6.5 6.5l11 11M17.5 6.5l-11 11"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.8l-5.2 2.8 1-5.8-4.3-4.1 5.9-.9z"/></symbol>
+  <symbol id="i-tap" viewBox="0 0 24 24"><path d="M9.5 11V5.5a1.75 1.75 0 013.5 0V11l3.7.8a2 2 0 011.6 2.3l-.8 4.4a2.5 2.5 0 01-2.5 2H10a2.5 2.5 0 01-2-1l-3-4a1.6 1.6 0 012.4-2.1L9.5 15"/><path d="M6 6.5a5 5 0 0110.5-1.6"/></symbol>
+
+  <!-- categories -->
+  <symbol id="c-hosp" viewBox="0 0 24 24"><path d="M4 17h16M5.5 17a6.5 6.5 0 0113 0M12 10.5V8.5M10.3 8.5h3.4M3 20h18"/></symbol>
+  <symbol id="c-retail" viewBox="0 0 24 24"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 10V6.5a3 3 0 016 0V10"/></symbol>
+  <symbol id="c-events" viewBox="0 0 24 24"><path d="M4 7.5h16v3a1.8 1.8 0 000 3.6v3H4v-3a1.8 1.8 0 000-3.6z"/><path d="M14.5 7.5v1.6M14.5 11.4v1.6M14.5 14.9v2.2"/></symbol>
+  <symbol id="c-warehouse" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></symbol>
+  <symbol id="c-delivery" viewBox="0 0 24 24"><path d="M3 6.5h11v9.5H3zM14 9.5h3.6l3.4 3.4V16H14"/><circle cx="7" cy="17.5" r="1.9"/><circle cx="17" cy="17.5" r="1.9"/></symbol>
+  <symbol id="c-moving" viewBox="0 0 24 24"><path d="M3.5 4h2.2l2.4 12.5H20"/><circle cx="9.5" cy="19" r="1.7"/><rect x="10.5" y="6" width="7.5" height="7.5" rx="1.2"/><path d="M14.25 6v2.6"/></symbol>
+  <symbol id="c-cleaning" viewBox="0 0 24 24"><path d="M11 3.5c.8 4.2 2.3 5.7 6.5 6.5-4.2.8-5.7 2.3-6.5 6.5-.8-4.2-2.3-5.7-6.5-6.5 4.2-.8 5.7-2.3 6.5-6.5zM18.5 14.5c.35 1.8 1 2.45 2.8 2.8-1.8.35-2.45 1-2.8 2.8-.35-1.8-1-2.45-2.8-2.8 1.8-.35 2.45-1 2.8-2.8z"/></symbol>
+  <symbol id="c-education" viewBox="0 0 24 24"><path d="M2.5 9.5L12 5l9.5 4.5L12 14z"/><path d="M6.5 11.6v4.2c0 1.5 2.5 2.7 5.5 2.7s5.5-1.2 5.5-2.7v-4.2M21.5 9.5v5"/></symbol>
+  <symbol id="c-general" viewBox="0 0 24 24"><rect x="3.5" y="7.5" width="17" height="12" rx="2"/><path d="M9 7.5V5.5h6v2M3.5 12.5h17"/></symbol>
+
+  <!-- benefits / worker types / safety / steps -->
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="3" y="6.5" width="18" height="11" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6.5 9.5v.01M17.5 14.5v.01"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0111 0"/><circle cx="17" cy="9.5" r="2.5"/><path d="M15.6 14.3A4.5 4.5 0 0121 19"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-area" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><path d="M12 12l5.8-5.8"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3.5l9 4.5-9 4.5-9-4.5z"/><path d="M3 12.5l9 4.5 9-4.5M3 16.5l9 4.5 9-4.5"/></symbol>
+  <symbol id="i-nosearch" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5.5 5.5M4.5 4.5l13 13"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z"/><path d="M8.8 12l2.2 2.2 4.3-4.5"/></symbol>
+  <symbol id="i-career" viewBox="0 0 24 24"><path d="M3.5 17.5l5.5-5.5 3.5 3.5 7.5-7.5"/><path d="M15 8h5v5"/></symbol>
+  <symbol id="i-id" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2.5"/><circle cx="8.5" cy="10.5" r="2.2"/><path d="M5.5 15.8a3.2 3.2 0 016 0M14 10h4.5M14 13.5h3"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8.5L19 7.5V21H6z"/><path d="M14 3v5h5M9 12h6.5M9 15.5h4"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8.2 18h6.3a3.5 3.5 0 000-7h-5a3.5 3.5 0 010-7h6.3"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.8l9 15.7H3z"/><path d="M12 10v4.4M12 17.2v.01"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3.5v11M7.5 10l4.5 4.5 4.5-4.5M4.5 19.5h15"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 16.5V11a6 6 0 0112 0v5.5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 004 0"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M4 7.5h14.5A1.5 1.5 0 0120 9v9a1.5 1.5 0 01-1.5 1.5h-13A1.5 1.5 0 014 18V6.5A1.5 1.5 0 015.5 5H17"/><path d="M16 13.5h.01"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3"/><path d="M18 3v4h-4M6 21v-4h4"/></symbol>
+  <symbol id="i-support" viewBox="0 0 24 24"><path d="M4.5 13.5v-1.5a7.5 7.5 0 0115 0v1.5"/><path d="M4.5 13.5h3v5h-2a1 1 0 01-1-1zM19.5 13.5h-3v5h2a1 1 0 001-1z"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3.5c.9 4.6 2.6 6.3 7.2 7.2-4.6.9-6.3 2.6-7.2 7.2-.9-4.6-2.6-6.3-7.2-7.2 4.6-.9 6.3-2.6 7.2-7.2z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 20.5z"/><path d="M4 20.5A2.5 2.5 0 016.5 18H20v3H6.5"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 11.5V5.8a1.6 1.6 0 013.2 0v4.7-6.3a1.6 1.6 0 013.2 0v6.3-4.7a1.6 1.6 0 013.2 0v8.4c0 4-2.6 6.8-6.3 6.8-2.3 0-3.7-.9-5-2.6L3.8 13a1.7 1.7 0 012.7-2z"/></symbol>
+</svg>
 
 <!-- reading progress + ambient field + pointer glow -->
 <div class="scroll-bar" id="scroll-bar" aria-hidden="true"><span></span></div>
@@ -47,7 +97,7 @@
 </div>
 
 <!-- ══════════ Header ══════════ -->
-<header class="site-header" id="top" data-mode="over">
+<header class="site-header" id="top" data-mode="over" data-tone="dark">
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="SAPOTR — back to top">
       <img class="brand-dark"  src="assets/logo-wordmark.png"       alt="SAPOTR" width="118" height="29">
@@ -55,456 +105,819 @@
     </a>
 
     <nav class="nav" aria-label="Sections of this page">
-      <a href="#how-it-works">How it works</a>
-      <a href="#services">Services</a>
+      <a href="#benefits">How it Benefits You</a>
+      <a href="#work-types">Work Types</a>
+      <a href="#become">Become a SAPOTR</a>
       <a href="#faq">FAQ</a>
     </nav>
 
     <div class="header-actions">
-      <a class="btn btn--primary btn--sm magnet" href="#book">Book an Employee</a>
-      <button class="burger" id="burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <a class="btn btn--accent btn--sm magnet" href="#become">Start Earning</a>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
         <span></span><span></span>
       </button>
     </div>
   </div>
 
-  <div class="mobile-nav" id="mobile-nav" hidden>
-    <a href="#how-it-works">How it works</a>
-    <a href="#services">Services</a>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Menu" hidden>
+    <a href="#benefits">How it Benefits You</a>
+    <a href="#work-types">Work Types</a>
+    <a href="#become">Become a SAPOTR</a>
     <a href="#faq">FAQ</a>
-    <a class="btn btn--primary" href="#book">Book an Employee</a>
-  </div>
+    <a class="btn btn--accent" href="#become">Start Earning</a>
+  </nav>
 </header>
 
 <main id="main">
 
-<!-- ══════════ 1 · Hero ══════════ -->
-<section class="hero" id="hero">
-  <div class="hero-media" aria-hidden="true">
-    <video id="hero-video" class="hero-video" autoplay muted loop playsinline preload="metadata">
-      <!-- 9:16 recut of the same film for portrait screens -->
-      <source src="assets/hero-mobile.mp4" type="video/mp4" media="(max-width: 680px)">
-      <source src="assets/hero.mp4" type="video/mp4">
-    </video>
-    <span class="hero-scrim"></span>
-    <span class="hero-grain"></span>
-  </div>
+<!-- ══════════ 1 · Hero — five banners ══════════ -->
+<section class="hero" id="hero" aria-roledescription="carousel" aria-label="SAPOTR — five banners">
+  <div class="hero-stage" id="hero-stage">
+    <div class="hero-slides" id="hero-slides">
 
-  <div class="wrap hero-inner">
-    <div class="hero-copy">
-      <p class="eyebrow eyebrow--light r" data-r>Verified workforce · New Zealand</p>
-      <h1 data-split>Need an Extra Employee? <span class="hl">Just Tap.</span></h1>
-      <p class="hero-lede r" data-r>Extra hands for everyday work — booked in about a minute.</p>
+      <!-- ───── Banner 1 · Auckland opportunity network ───── -->
+      <article class="hs hs--map is-active" id="hs-1" data-tone="dark" role="tabpanel" aria-roledescription="slide" aria-label="1 of 5">
+        <div class="hs-bg" aria-hidden="true">
+          <div class="hmap" id="hmap">
+            <!-- A branded, drawn Auckland rather than a map tile: crisp at any
+                 density, no API, no key. js re-frames the viewBox per device. -->
+            <svg class="hmap-svg" id="hmap-svg" viewBox="-760 -80 2100 1180" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <defs>
+                <linearGradient id="m-sea" x1="0" y1="0" x2=".7" y2="1">
+                  <stop offset="0" stop-color="#0A1131"/><stop offset="1" stop-color="#070C24"/>
+                </linearGradient>
+                <linearGradient id="m-land" x1="0" y1="0" x2=".3" y2="1">
+                  <stop offset="0" stop-color="#1A2556"/><stop offset="1" stop-color="#141D48"/>
+                </linearGradient>
+                <pattern id="m-dots" width="18" height="18" patternUnits="userSpaceOnUse">
+                  <circle cx="9" cy="9" r="1.35" fill="#12C7C7" opacity=".22"/>
+                </pattern>
+                <radialGradient id="m-hub" cx=".5" cy=".5" r=".5">
+                  <stop offset="0" stop-color="#12C7C7" stop-opacity=".34"/><stop offset="1" stop-color="#12C7C7" stop-opacity="0"/>
+                </radialGradient>
 
-      <ul class="trust r" data-r>
-        <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Verified</li>
-        <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Flat rate</li>
-        <li><svg class="tick" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>Pay for work time</li>
-      </ul>
+                <g id="akl-land">
+                  <!-- North Shore, Hibiscus Coast and the west -->
+                  <path d="M-1400-600H1040L980-140C1010-40 1006 60 960 126C920 184 870 176 838 218C782 256 726 276 660 286C588 297 528 342 462 368C398 393 330 380 258 386C186 392 112 420 44 460C6 480-16 500-40 550C-90 580-140 570-200 590C-520 612-900 604-1400 612Z"/>
+                  <!-- the isthmus and the south, out past Papakura -->
+                  <path d="M-1400 596L-200 570C-120 560-40 552 40 528C110 508 186 490 262 480C334 470 392 494 464 484C520 476 562 510 624 502C686 494 744 522 806 512C872 501 928 530 990 518C1054 506 1116 532 1180 520C1240 510 1300 536 1360 528C1440 518 1560 540 1700 528L2400 520V1700H-1400Z"/>
+                  <!-- Rangitoto, Motutapu, Waiheke, Browns -->
+                  <path d="M1046 252C1074 228 1124 232 1148 262C1172 292 1156 336 1112 342C1068 348 1034 322 1036 290C1037 272 1038 260 1046 252Z"/>
+                  <path d="M1170 300C1210 288 1246 306 1250 336C1254 364 1224 380 1192 372C1164 365 1152 336 1158 316C1161 306 1164 302 1170 300Z"/>
+                  <path d="M1266 384C1330 356 1430 366 1486 396C1540 424 1546 470 1496 490C1440 512 1350 504 1300 478C1256 456 1240 412 1266 384Z"/>
+                  <circle cx="1128" cy="432" r="15"/>
+                </g>
+                <g id="akl-water">
+                  <!-- Manukau Harbour, opening west to the Tasman -->
+                  <path d="M-1400 720L-200 646C-90 624 20 604 130 618C220 630 300 658 380 648C450 639 500 662 520 702C540 740 528 786 470 824C400 870 260 884 120 914C20 936-90 944-200 954L-1400 1010Z"/>
+                  <!-- Tamaki estuary -->
+                  <path d="M886 522C878 570 890 616 878 666C870 702 876 734 868 766C864 782 854 782 852 766C848 734 858 702 862 666C870 616 862 570 870 522Z"/>
+                </g>
+              </defs>
 
-      <div class="hero-cta r" data-r>
-        <a class="btn btn--accent magnet" href="#book">Book an Employee</a>
-        <a class="btn btn--ghost" href="#how-it-works">See how it works</a>
-      </div>
+              <rect x="-1400" y="-600" width="3800" height="2300" fill="url(#m-sea)"/>
+              <use href="#akl-land" fill="url(#m-land)"/>
+              <use href="#akl-land" fill="url(#m-dots)"/>
+              <use href="#akl-land" class="hmap-coast" fill="none"/>
+              <use href="#akl-water" fill="url(#m-sea)" class="hmap-coast"/>
+
+              <!-- parks -->
+              <g fill="#1E2B61" opacity=".9">
+                <ellipse cx="222" cy="220" rx="56" ry="30"/><ellipse cx="596" cy="200" rx="42" ry="22"/>
+                <ellipse cx="322" cy="626" rx="46" ry="26"/><ellipse cx="742" cy="626" rx="52" ry="28"/>
+                <ellipse cx="-260" cy="720" rx="150" ry="60"/><ellipse cx="1380" cy="436" rx="60" ry="26"/>
+                <ellipse cx="640" cy="900" rx="58" ry="28"/>
+              </g>
+
+              <!-- arterials, then motorways in brand yellow -->
+              <g class="hmap-roads" fill="none" stroke-linecap="round">
+                <g class="hmap-art">
+                  <path d="M120 90C150 170 190 230 226 316"/><path d="M556 142C612 186 654 226 700 258"/>
+                  <path d="M540 566C620 574 690 592 792 580"/><path d="M470 574C406 596 346 620 290 658"/>
+                  <path d="M700 686C762 716 818 744 858 796"/><path d="M300 592C330 640 350 680 366 726"/>
+                  <path d="M950 536C1010 550 1080 566 1150 560"/><path d="M566 760C640 776 720 790 800 776"/>
+                  <path d="M566 880C660 872 760 856 860 826"/><path d="M-60 560C20 508 110 470 200 452"/>
+                  <path d="M-600 420C-420 460-260 500-60 560"/><path d="M860 826C930 880 960 960 980 1080"/>
+                </g>
+                <g class="hmap-mway">
+                  <path d="M262-500C280-300 300 20 356 200C390 300 428 316 446 452C444 492 452 516 456 550C462 600 486 660 512 720C540 786 556 880 566 1020C574 1140 600 1260 640 1400"/>
+                  <path d="M-700 660C-420 640-200 630-60 618C90 596 240 600 400 604C480 600 566 580 566 580"/>
+                  <path d="M300 1300C348 960 420 726 470 686C516 650 560 632 630 620"/>
+                  <path d="M444 380C446 420 446 466 448 504"/>
+                </g>
+              </g>
+
+              <!-- the SAPOTR network: every pin wired back to the city -->
+              <g class="hmap-net" id="hmap-net"></g>
+              <circle cx="452" cy="560" r="150" fill="url(#m-hub)"/>
+
+              <g class="hmap-labels">
+                <text class="lb-min" x="210" y="-30">Orewa</text>
+                <text class="lb-min" x="330" y="66">Silverdale</text>
+                <text x="250" y="170">Albany</text>
+                <text class="lb-min" x="-60" y="330">Kumeu</text>
+                <text x="760" y="226">Takapuna</text>
+                <text x="590" y="262">Devonport</text>
+                <text class="lb-min" x="40" y="400">West Harbour</text>
+                <text x="80" y="498">Henderson</text>
+                <text class="lb-min" x="-110" y="690">Titirangi</text>
+                <text x="120" y="604">New Lynn</text>
+                <text class="lb-city" x="452" y="648" text-anchor="middle">AUCKLAND</text>
+                <text x="800" y="560">Mission Bay</text>
+                <text x="970" y="590">St Heliers</text>
+                <text class="lb-min" x="626" y="600">Newmarket</text>
+                <text x="330" y="700">Onehunga</text>
+                <text class="lb-min" x="660" y="712">Mt Wellington</text>
+                <text x="905" y="708">Howick</text>
+                <text class="lb-min" x="920" y="812">Botany</text>
+                <text class="lb-min" x="470" y="792">Papatoetoe</text>
+                <text x="660" y="846">Manukau</text>
+                <text class="lb-min" x="700" y="936">Takanini</text>
+                <text x="620" y="1012">Papakura</text>
+                <text x="1050" y="380">Rangitoto</text>
+                <text x="1320" y="530">Waiheke</text>
+              </g>
+            </svg>
+            <span class="hs-scrim"></span>
+            <div class="hmap-hub" id="hmap-hub"><img src="assets/img/logo-mark-256.webp" alt="" width="256" height="202"></div>
+            <div class="hmap-pins" id="hmap-pins"></div>
+            <div class="hmap-cards" id="hmap-cards"></div>
+          </div>
+        </div>
+
+        <div class="wrap hs-inner">
+          <div class="hs-copy">
+            <h1 class="hs-title b1-title" data-seq="1">
+              <span class="b1-w" style="--i:0">Receive Work.</span>
+              <span class="b1-w" style="--i:1">Accept.</span>
+              <span class="b1-w" style="--i:2">Complete.</span>
+              <span class="b1-w" style="--i:3">Earn.</span>
+              <span class="b1-w" style="--i:4">Repeat.</span>
+            </h1>
+            <p class="hs-sub" data-seq="2">Get multiple casual work opportunities <br class="br-d">from businesses near you.</p>
+          </div>
+          <div class="hs-cta" data-seq="3">
+            <a class="btn btn--accent btn--lg magnet" href="#become">Become a SAPOTR<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ───── Banner 2 · the extra support businesses need ───── -->
+      <article class="hs hs--support" id="hs-2" data-tone="light" role="tabpanel" aria-roledescription="slide" aria-label="2 of 5" hidden>
+        <div class="hs-bg" aria-hidden="true">
+          <span class="b2-disc"></span><span class="b2-ring"></span><span class="b2-dots"></span>
+        </div>
+
+        <div class="wrap hs-inner">
+          <div class="hs-copy">
+            <h2 class="hs-title b2-title" data-seq="1">Be the <mark>Extra Support</mark> <br class="br-d">Businesses Need &amp; <span class="b2-earn">Earn Easily.</span></h2>
+          </div>
+          <div class="hs-cta" data-seq="2">
+            <a class="btn btn--accent btn--lg magnet" href="#become">Become a SAPOTR<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+
+        <div class="b2-art">
+          <img class="b2-person" src="assets/img/sapotr-walk.webp" width="693" height="1100" decoding="async" fetchpriority="low"
+               alt="A smiling SAPOTR in a navy SAPOTR cap and polo, carrying a work bag and giving a thumbs up">
+          <div class="ocard ocard--a" aria-hidden="true">
+            <span class="ocard-ic ic-cyan"><svg class="ic"><use href="#c-hosp"/></svg></span>
+            <span class="ocard-t"><small>Hospitality</small><b>Wait Staff</b></span>
+          </div>
+          <div class="ocard ocard--b" aria-hidden="true">
+            <span class="ocard-ic ic-yellow"><svg class="ic"><use href="#c-retail"/></svg></span>
+            <span class="ocard-t"><small>Retail &amp; Shopping</small><b>Shelf Filler</b></span>
+          </div>
+          <div class="ocard ocard--c" aria-hidden="true">
+            <span class="ocard-ic ic-red"><svg class="ic"><use href="#c-events"/></svg></span>
+            <span class="ocard-t"><small>Events &amp; Entertainment</small><b>Event Crew</b></span>
+          </div>
+          <span class="b2-chip b2-chip--1" aria-hidden="true"><svg class="ic"><use href="#c-warehouse"/></svg></span>
+          <span class="b2-chip b2-chip--2" aria-hidden="true"><svg class="ic"><use href="#c-delivery"/></svg></span>
+          <span class="b2-chip b2-chip--3" aria-hidden="true"><svg class="ic"><use href="#c-cleaning"/></svg></span>
+        </div>
+      </article>
+
+      <!-- ───── Banner 3 · the old way vs SAPOTR ───── -->
+      <article class="hs hs--old" id="hs-3" data-tone="dark" role="tabpanel" aria-roledescription="slide" aria-label="3 of 5" hidden>
+        <div class="hs-bg" aria-hidden="true"><span class="b3-grid"></span><span class="b3-glow"></span></div>
+
+        <div class="wrap hs-inner b3-inner">
+          <div class="b3-copy">
+            <ul class="b3-no" data-seq="1">
+              <li style="--i:0"><span class="b3-ic"><svg class="ic" aria-hidden="true"><use href="#i-nosearch"/></svg></span><s>No Searching Jobs in FB.</s></li>
+              <li style="--i:1"><span class="b3-ic"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span><s>No Applying in Job Boards.</s></li>
+              <li style="--i:2"><span class="b3-ic"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><s>No Waiting for Interview Calls.</s></li>
+              <li style="--i:3"><span class="b3-ic"><svg class="ic" aria-hidden="true"><use href="#i-bell"/></svg></span><s>No Chasing Confirmations.</s></li>
+            </ul>
+            <h2 class="hs-title b3-title" data-seq="2">Skip the Old Way of Finding Work. <em>Get Smarter.</em></h2>
+            <div class="hs-cta" data-seq="3">
+              <a class="btn btn--accent btn--lg btn--wrap magnet" href="#become"><svg class="ic" aria-hidden="true"><use href="#i-tap"/></svg>Just Tap SAPOTR &amp; Receive Work Opportunities.</a>
+            </div>
+          </div>
+
+          <div class="b3-phone" aria-hidden="true" data-seq="4">
+            <div class="phone">
+              <div class="phone-screen">
+                <div class="ph-bar"><img src="assets/img/logo-mark-256.webp" alt="" width="256" height="202"><b>SAPOTR</b><i class="ph-live"></i></div>
+                <div class="ph-note" style="--i:0">
+                  <span class="ocard-ic ic-cyan"><svg class="ic"><use href="#c-warehouse"/></svg></span>
+                  <span class="ocard-t"><small>Warehousing &amp; Logistics</small><b>Picker / Packer</b></span>
+                  <span class="ph-accept">Accept</span>
+                </div>
+                <div class="ph-note" style="--i:1">
+                  <span class="ocard-ic ic-yellow"><svg class="ic"><use href="#c-hosp"/></svg></span>
+                  <span class="ocard-t"><small>Hospitality</small><b>Kitchen Hand</b></span>
+                  <span class="ph-accept">Accept</span>
+                </div>
+                <div class="ph-note" style="--i:2">
+                  <span class="ocard-ic ic-red"><svg class="ic"><use href="#c-moving"/></svg></span>
+                  <span class="ocard-t"><small>Moving &amp; Setup</small><b>Moving Assistant</b></span>
+                  <span class="ph-accept">Accept</span>
+                </div>
+                <div class="ph-note" style="--i:3">
+                  <span class="ocard-ic ic-cyan"><svg class="ic"><use href="#c-delivery"/></svg></span>
+                  <span class="ocard-t"><small>Delivery &amp; Driving</small><b>Courier Driver</b></span>
+                  <span class="ph-accept">Accept</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ───── Banner 4 · who can join ───── -->
+      <article class="hs hs--types" id="hs-4" data-tone="light" role="tabpanel" aria-roledescription="slide" aria-label="4 of 5" hidden>
+        <div class="hs-bg" aria-hidden="true"><span class="b4-sun"></span><span class="b4-arcs"></span></div>
+
+        <div class="wrap hs-inner b4-inner">
+          <div class="hs-copy b4-copy">
+            <h2 class="hs-title b4-title" data-seq="1">Ready to Work? <br><em>Or Need Extra Income?</em></h2>
+            <div class="hs-cta" data-seq="2">
+              <a class="btn btn--accent btn--lg magnet" href="#become">Join Thousands of SAPOTRs<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="b4-art">
+          <img class="b4-group" src="assets/img/sapotr-group.webp" width="1110" height="1300" decoding="async" fetchpriority="low"
+               alt="A crowd of smiling SAPOTRs of many backgrounds, all in navy SAPOTR caps and polos">
+            <ul class="b4-types" data-seq="3">
+              <li class="wt wt--1" style="--i:0"><span class="wt-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#c-education"/></svg></span>Student</li>
+              <li class="wt wt--2" style="--i:1"><span class="wt-ic ic-yellow"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg></span>Weekend Worker</li>
+              <li class="wt wt--3" style="--i:2"><span class="wt-ic ic-red"><svg class="ic" aria-hidden="true"><use href="#i-sparkle"/></svg></span>New Part-Timer</li>
+              <li class="wt wt--4" style="--i:3"><span class="wt-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span>Any-Shift Worker</li>
+              <li class="wt wt--5" style="--i:4"><span class="wt-ic ic-yellow"><svg class="ic" aria-hidden="true"><use href="#c-general"/></svg></span>Full-Timer</li>
+              <li class="wt wt--6" style="--i:5"><span class="wt-ic ic-red"><svg class="ic" aria-hidden="true"><use href="#i-star"/></svg></span>Experienced</li>
+            </ul>
+        </div>
+      </article>
+
+      <!-- ───── Banner 5 · the brand statement ───── -->
+      <article class="hs hs--brand" id="hs-5" data-tone="dark" role="tabpanel" aria-roledescription="slide" aria-label="5 of 5" hidden>
+        <div class="hs-bg" aria-hidden="true">
+          <span class="b5-beam b5-beam--y"></span><span class="b5-beam b5-beam--r"></span><span class="b5-beam b5-beam--c"></span>
+        </div>
+
+        <div class="wrap hs-inner b5-inner">
+          <div class="b5-head">
+            <h2 class="b5-title" data-seq="1"><span class="b5-name">SAPOTR,</span> <span class="b5-line">NZ’s Last-Minute Staff Support Platform.</span></h2>
+            <img class="b5-mark" data-seq="2" src="assets/img/logo-mark-256.webp" alt="" width="256" height="202" aria-hidden="true">
+          </div>
+          <figure class="b5-photo" data-seq="3">
+            <img src="assets/img/hero-team-1400.webp" srcset="assets/img/hero-team-760.webp 760w, assets/img/hero-team-1400.webp 1318w"
+                 sizes="(max-width:1300px) 100vw, 1240px" width="1318" height="514" decoding="async" fetchpriority="low"
+                 alt="A line of SAPOTRs giving a thumbs up on the Auckland waterfront, the Sky Tower behind them">
+            <div class="hs-cta b5-cta">
+              <a class="btn btn--gold btn--xl magnet" href="#become"><span>SUPPORT DELIVERED.</span> <span>BY SAPOTRs</span></a>
+            </div>
+          </figure>
+        </div>
+      </article>
+
     </div>
 
+    <!-- carousel controls -->
+    <div class="hero-ui" id="hero-ui">
+      <div class="wrap hero-ui-inner">
+        <p class="hero-count" aria-hidden="true"><b id="hero-now">01</b><span>/</span>05</p>
+        <div class="hero-nav">
+          <button class="hui-btn" id="hero-prev" type="button" aria-label="Previous banner"><svg class="ic" aria-hidden="true"><use href="#i-chev-l"/></svg></button>
+          <div class="hero-dots" id="hero-dots" role="tablist" aria-label="Choose a banner"></div>
+          <button class="hui-btn" id="hero-next" type="button" aria-label="Next banner"><svg class="ic" aria-hidden="true"><use href="#i-chev-r"/></svg></button>
+        </div>
+        <button class="hui-btn hui-toggle" id="hero-toggle" type="button" aria-label="Pause automatic banners" aria-pressed="false">
+          <svg class="ic ic-pause" aria-hidden="true"><use href="#i-pause"/></svg><svg class="ic ic-play" aria-hidden="true"><use href="#i-play"/></svg>
+        </button>
+      </div>
+    </div>
   </div>
-
-  <a class="hero-scroll" href="#ticker" aria-label="Scroll down"><span></span></a>
 </section>
 
 <!-- ══════════ Category ticker ══════════ -->
-<section class="ticker" id="ticker" aria-label="Work categories SAPOTR covers">
+<section class="ticker" id="ticker" aria-label="Work types on SAPOTR">
   <div class="ticker-row">
    <div class="ticker-inner" id="ticker-inner">
     <ul class="ticker-track">
-      <li class="t-retail">Store &amp; Retail</li><li class="t-dot" aria-hidden="true">•</li>
-      <li class="t-food">Restaurants</li><li class="t-dot" aria-hidden="true">•</li>
-      <li class="t-hotel">Hotels</li><li class="t-dot" aria-hidden="true">•</li>
-      <li class="t-showroom">Showrooms</li><li class="t-dot" aria-hidden="true">•</li>
-      <li class="t-apartment">Apartments</li><li class="t-dot" aria-hidden="true">•</li>
-      <li class="t-event">Events</li><li class="t-dot" aria-hidden="true">•</li>
-      <li class="t-moving">Moving &amp; Shifting</li><li class="t-dot" aria-hidden="true">•</li>
-      <li class="t-maintenance">Maintenance</li><li class="t-dot" aria-hidden="true">•</li>
-      <li class="t-property">Property Upkeep</li><li class="t-dot" aria-hidden="true">•</li>
-      <li class="t-home">Home &amp; Personal</li><li class="t-dot" aria-hidden="true">•</li>
+      <li class="t-hosp">Hospitality</li><li class="t-dot" aria-hidden="true">•</li>
+      <li class="t-retail">Retail &amp; Shopping</li><li class="t-dot" aria-hidden="true">•</li>
+      <li class="t-events">Events &amp; Entertainment</li><li class="t-dot" aria-hidden="true">•</li>
+      <li class="t-warehouse">Warehousing &amp; Logistics</li><li class="t-dot" aria-hidden="true">•</li>
+      <li class="t-delivery">Delivery &amp; Driving</li><li class="t-dot" aria-hidden="true">•</li>
+      <li class="t-moving">Moving &amp; Setup</li><li class="t-dot" aria-hidden="true">•</li>
+      <li class="t-cleaning">Cleaning &amp; Facilities</li><li class="t-dot" aria-hidden="true">•</li>
+      <li class="t-education">Education &amp; Institutions</li><li class="t-dot" aria-hidden="true">•</li>
+      <li class="t-general">General Business Support</li><li class="t-dot" aria-hidden="true">•</li>
     </ul>
    </div>
   </div>
 </section>
 
-<!-- ══════════ 2 · The problem ══════════ -->
-<section class="section" id="problem">
-  <div class="wrap problem-grid">
-    <div class="problem-copy">
-      <p class="eyebrow r" data-r>The problem</p>
-      <h2 data-split>Finding Reliable Help Isn’t Easy.</h2>
-      <p class="lede r" data-r>Calls. Searching. Waiting. SAPOTR replaces all of it.</p>
-    </div>
-
-    <!-- Messages live in the DOM for crawlers; JS reveals them in sequence. -->
-    <div class="chat r" data-r id="chat">
-      <div class="chat-bar">
-        <img class="chat-pic" src="assets/logo-mark.png" alt="" width="40" height="40" loading="lazy">
-        <span class="chat-who"><strong>SAPOTR</strong><em id="chat-status">online</em></span>
-        <span class="chat-icons" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M15 10.5V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2h9a2 2 0 002-2v-3.5l7 4v-11l-7 4z"/></svg>
-          <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11 11 0 003.5.56 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11 11 0 00.56 3.5 1 1 0 01-.25 1l-2.2 2.3z"/></svg>
-        </span>
-      </div>
-
-      <ol class="chat-body">
-        <li class="chat-day" aria-hidden="true"><span>Today</span></li>
-
-        <li class="msg msg--out">
-          <span class="msg-b">Need help for a few hours today.
-            <span class="msg-meta"><time datetime="09:41">9:41</time>
-              <svg class="msg-tick" viewBox="0 0 18 12" aria-hidden="true"><path d="M1 6.6l3.2 3.2L10.6 2"/><path d="M6.6 9.8L13 2"/></svg>
-            </span>
-          </span>
-        </li>
-
-        <li class="msg msg--out">
-          <span class="msg-b">Finding reliable short-term help isn’t easy.
-            <span class="msg-meta"><time datetime="09:41">9:41</time>
-              <svg class="msg-tick" viewBox="0 0 18 12" aria-hidden="true"><path d="M1 6.6l3.2 3.2L10.6 2"/><path d="M6.6 9.8L13 2"/></svg>
-            </span>
-          </span>
-        </li>
-
-        <li class="msg msg--in">
-          <img class="msg-pic" src="assets/emp-priya.jpg" alt="" width="30" height="30" loading="lazy">
-          <span class="msg-b">Tell us what you need.
-            <span class="msg-meta"><time datetime="09:42">9:42</time></span>
-          </span>
-        </li>
-
-        <li class="msg msg--in">
-          <img class="msg-pic" src="assets/emp-priya.jpg" alt="" width="30" height="30" loading="lazy">
-          <span class="msg-b">We’ll find an available verified employee.
-            <span class="msg-meta"><time datetime="09:42">9:42</time></span>
-          </span>
-        </li>
-      </ol>
-
-      <div class="chat-foot">
-        <ul class="chat-chips" aria-label="Booking details">
-          <li>Need today</li><li>3 hours</li><li>Retail</li><li>2 employees</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ 3 · How it works — four fixed cards ══════════ -->
-<section class="section section--tint" id="how-it-works">
+<!-- ══════════ 2 · How SAPOTR benefits you ══════════ -->
+<section class="section" id="benefits">
   <div class="wrap">
-    <p class="eyebrow r" data-r>How it works</p>
-    <h2 data-split>From Need to Done.</h2>
-    <p class="section-sub r" data-r>Four steps. About a minute.</p>
+    <h2 class="sec-title sec-title--center" data-split>How <span class="hl">SAPOTR</span> Benefits You?</h2>
 
-    <ol class="work r" data-r id="work">
-      <li class="wcard">
-        <span class="wcard-media">
-          <video class="wcard-video" muted loop playsinline preload="none"
-                 poster="assets/step-tap.jpg" aria-label="A finger tapping a booking into a phone screen">
-            <source src="assets/step-tap.mp4" type="video/mp4">
-          </video>
-          <img class="wcard-poster" src="assets/step-tap.jpg" alt="A finger tapping a booking into a phone screen"
-               width="1080" height="1350" loading="lazy" decoding="async">
-          <span class="wcard-scrim" aria-hidden="true"></span>
-        </span>
-        <span class="wcard-step" aria-hidden="true">01</span>
-        <span class="wcard-body">
-          <span class="wcard-t">Just Tap</span>
-          <span class="wcard-d">Open the app and say what you need.</span>
-        </span>
-      </li>
-      <li class="wcard">
-        <span class="wcard-media">
-          <video class="wcard-video" muted loop playsinline preload="none"
-                 poster="assets/step-book.jpg" aria-label="A caf&eacute; owner taking the booking on her phone at the counter">
-            <source src="assets/step-book.mp4" type="video/mp4">
-          </video>
-          <img class="wcard-poster" src="assets/step-book.jpg" alt="A caf&eacute; owner taking the booking on her phone at the counter"
-               width="1080" height="1350" loading="lazy" decoding="async">
-          <span class="wcard-scrim" aria-hidden="true"></span>
-        </span>
-        <span class="wcard-step" aria-hidden="true">02</span>
-        <span class="wcard-body">
-          <span class="wcard-t">Book</span>
-          <span class="wcard-d">Pick the category, time and how many.</span>
-        </span>
-      </li>
-      <li class="wcard">
-        <span class="wcard-media">
-          <video class="wcard-video" muted loop playsinline preload="none"
-                 poster="assets/step-assign.jpg" aria-label="A verified SAPOTR employee partner arriving and being welcomed into a business">
-            <source src="assets/step-assign.mp4" type="video/mp4">
-          </video>
-          <img class="wcard-poster" src="assets/step-assign.jpg" alt="A verified SAPOTR employee partner arriving and being welcomed into a business"
-               width="1080" height="1350" loading="lazy" decoding="async">
-          <span class="wcard-scrim" aria-hidden="true"></span>
-        </span>
-        <span class="wcard-step" aria-hidden="true">03</span>
-        <span class="wcard-body">
-          <span class="wcard-t">Assign</span>
-          <span class="wcard-d">Your verified employee arrives.</span>
-        </span>
-      </li>
-      <li class="wcard">
-        <span class="wcard-media">
-          <video class="wcard-video" muted loop playsinline preload="none"
-                 poster="assets/step-done.jpg" aria-label="A worker handing over finished work across the counter">
-            <source src="assets/step-done.mp4" type="video/mp4">
-          </video>
-          <img class="wcard-poster" src="assets/step-done.jpg" alt="A worker handing over finished work across the counter"
-               width="1080" height="1350" loading="lazy" decoding="async">
-          <span class="wcard-scrim" aria-hidden="true"></span>
-        </span>
-        <span class="wcard-step" aria-hidden="true">04</span>
-        <span class="wcard-body">
-          <span class="wcard-t">Done</span>
-          <span class="wcard-d">The work gets done. Pay for the hours worked.</span>
-        </span>
-      </li>
-    </ol>
-    <div class="dots" id="work-dots" aria-hidden="true"></div>
-  </div>
-</section>
-
-<!-- ══════════ 4 · Why SAPOTR ══════════ -->
-<section class="section" id="why">
-  <div class="wrap">
-    <p class="eyebrow r" data-r>Why SAPOTR</p>
-    <h2 data-split>Simple to book. Easy to trust.</h2>
-
-    <div class="bento" id="bento">
-      <article class="tile tile--lg r" data-r data-tilt data-spot>
-        <span class="tile-ic ic-cyan"><svg viewBox="0 0 24 24"><path d="M13 2L4.5 13.5H11L10 22l8.5-11.5H12L13 2z"/></svg></span>
-        <h3>Fast</h3><p>People when you need them.</p>
-        <span class="viz viz-bars" aria-hidden="true">
-          <i style="--w:96%;--d:.05s"></i><i style="--w:72%;--d:.15s"></i><i style="--w:44%;--d:.25s"></i>
-        </span>
-      </article>
-
-      <article class="tile r" data-r data-tilt data-spot>
-        <span class="tile-ic ic-yellow"><svg viewBox="0 0 24 24"><path d="M12 2.5l7.5 3.3v5.3c0 4.7-3.2 8.8-7.5 10.3-4.3-1.5-7.5-5.6-7.5-10.3V5.8L12 2.5z"/><path class="in" d="M8.6 12.2l2.3 2.3 4.5-4.8"/></svg></span>
-        <h3>Verified</h3><p>Checked employee partners.</p>
-        <span class="viz viz-chips" aria-hidden="true"><i>ID checked</i><i>Work rights</i></span>
-      </article>
-
-      <article class="tile r" data-r data-tilt data-spot>
-        <span class="tile-ic ic-cyan"><svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path class="in" d="M3 10h18M7 14.5h5"/></svg></span>
-        <h3>Transparent</h3><p>Clear price before you book.</p>
-        <span class="viz viz-rate" aria-hidden="true"><b>Flat rate</b><s>hidden fees</s></span>
-      </article>
-
-      <article class="tile r" data-r data-tilt data-spot>
-        <span class="tile-ic ic-red"><svg viewBox="0 0 24 24"><path d="M12 21s7-5.4 7-10.5A7 7 0 005 10.5C5 15.6 12 21 12 21z"/><circle class="in" cx="12" cy="10.5" r="2.5"/></svg></span>
-        <h3>Trackable</h3><p>See every booking’s status.</p>
-        <span class="viz viz-route" aria-hidden="true">
-          <svg viewBox="0 0 160 40" preserveAspectRatio="none">
-            <path class="rt" d="M6 32C40 32 44 10 78 10s40 20 76 20"/>
-            <circle class="rd" r="4"><animateMotion dur="3.4s" repeatCount="indefinite"
-              path="M6 32C40 32 44 10 78 10s40 20 76 20"/></circle>
-          </svg>
-        </span>
-      </article>
-
-      <article class="tile r" data-r data-tilt data-spot>
-        <span class="tile-ic ic-yellow"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path class="in" d="M12 6.8V12l3.4 2"/></svg></span>
-        <h3>Fair</h3><p>Pay for work time only.</p>
-        <span class="viz viz-arc" aria-hidden="true">
-          <svg viewBox="0 0 44 44"><circle class="ring" cx="22" cy="22" r="18"/><circle class="arc" cx="22" cy="22" r="18"/></svg>
-          <b>Breaks excluded</b>
-        </span>
-      </article>
-
-      <article class="tile tile--lg r" data-r data-tilt data-spot>
-        <span class="tile-ic ic-cyan"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3"/><path class="in" d="M18 3v4h-4M6 21v-4h4"/></svg></span>
-        <h3>Reliable</h3><p>Dependable cover, every shift.</p>
+    <div class="bento">
+      <!-- 1 · earnings -->
+      <article class="tile tile--earn r" data-r data-spot>
+        <span class="tile-ic ic-yellow"><svg class="ic" aria-hidden="true"><use href="#i-cash"/></svg></span>
+        <h3 class="earn-h"><span class="earn-pre">Earn Upto</span> <span class="earn-big">NZ$<b data-count="1000" data-format="comma">1,000</b></span><span class="earn-per">/Week</span></h3>
+        <p>Work and earn regularly.</p>
         <span class="viz viz-week" aria-hidden="true">
-          <i style="--d:.05s;--h:62%"></i><i style="--d:.11s;--h:78%"></i><i style="--d:.17s;--h:70%"></i>
-          <i style="--d:.23s;--h:92%"></i><i style="--d:.29s;--h:84%"></i><i style="--d:.35s;--h:100%"></i>
-          <i style="--d:.41s;--h:74%"></i>
+          <i style="--d:.05s;--h:46%"></i><i style="--d:.11s;--h:64%"></i><i style="--d:.17s;--h:58%"></i>
+          <i style="--d:.23s;--h:78%"></i><i style="--d:.29s;--h:70%"></i><i style="--d:.35s;--h:92%"></i>
+          <i style="--d:.41s;--h:100%"></i>
         </span>
+      </article>
+
+      <!-- 3 · flexible, with the mascot checking his watch -->
+      <article class="tile tile--flex r" data-r data-spot>
+        <span class="tile-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#i-clock"/></svg></span>
+        <h3>Work Flexibly</h3>
+        <p>Choose the days, shifts and hours that suit you</p>
+        <span class="viz viz-toggles" aria-hidden="true"><i>Days</i><i>Shifts</i><i>Hours</i></span>
+        <img class="flex-person" src="assets/img/sapotr-watch.webp" width="623" height="1000" loading="lazy" decoding="async"
+             alt="A SAPOTR pointing at his watch">
+      </article>
+
+      <!-- 2 · anyone -->
+      <article class="tile tile--any r" data-r data-spot>
+        <span class="tile-ic ic-red"><svg class="ic" aria-hidden="true"><use href="#i-people"/></svg></span>
+        <h3>Anyone Can Work</h3>
+        <p>Ready to work or looking for extra income.</p>
+      </article>
+
+      <!-- 4 · local -->
+      <article class="tile tile--area r" data-r data-spot>
+        <span class="viz viz-radar" aria-hidden="true"><i></i><i></i><i></i><b></b><b></b><b></b></span>
+        <span class="tile-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#i-area"/></svg></span>
+        <h3>Work in Your Area</h3>
+        <p>Get opportunities from businesses near you.</p>
+      </article>
+
+      <!-- 5 · variety -->
+      <article class="tile tile--variety r" data-r data-spot>
+        <span class="tile-ic ic-yellow"><svg class="ic" aria-hidden="true"><use href="#i-layers"/></svg></span>
+        <h3>More Work. More Variety.</h3>
+        <p>Work with different businesses and different types of general work.</p>
+        <span class="viz viz-cats" aria-hidden="true">
+          <span class="viz-cats-row">
+            <i><svg class="ic"><use href="#c-hosp"/></svg></i><i><svg class="ic"><use href="#c-retail"/></svg></i><i><svg class="ic"><use href="#c-events"/></svg></i>
+            <i><svg class="ic"><use href="#c-warehouse"/></svg></i><i><svg class="ic"><use href="#c-delivery"/></svg></i><i><svg class="ic"><use href="#c-moving"/></svg></i>
+            <i><svg class="ic"><use href="#c-cleaning"/></svg></i><i><svg class="ic"><use href="#c-education"/></svg></i><i><svg class="ic"><use href="#c-general"/></svg></i>
+          </span>
+        </span>
+      </article>
+
+      <!-- 6 · no searching -->
+      <article class="tile tile--nosearch r" data-r data-spot>
+        <span class="tile-ic ic-red"><svg class="ic" aria-hidden="true"><use href="#i-nosearch"/></svg></span>
+        <h3>No Job Searching &amp; Waiting</h3>
+        <p>No job boards, applications, calls or waiting for employers.</p>
+        <span class="viz viz-strike" aria-hidden="true"><s>job boards</s><s>applications</s><s>calls</s><s>waiting</s></span>
+      </article>
+
+      <!-- 7 · the loop, drawn as a cycle round the SAPOTR mark -->
+      <article class="tile tile--app r" data-r data-spot>
+        <div class="app-copy">
+          <span class="tile-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#i-repeat"/></svg></span>
+          <h3>Receive Work. Accept. Complete. Earn. Repeat.</h3>
+          <p>Manage your work through the <br>SAPOTR Partner App.</p>
+        </div>
+        <div class="loop" aria-hidden="true">
+          <svg class="loop-ring" viewBox="0 0 200 200"><circle cx="100" cy="100" r="78"/><circle class="loop-run" cx="100" cy="100" r="78"/></svg>
+          <img class="loop-mark" src="assets/img/logo-mark-256.webp" alt="" width="256" height="202" loading="lazy">
+          <span class="loop-n" style="--i:0;--a:-90deg"><svg class="ic"><use href="#i-bell"/></svg><b>Receive Work</b></span>
+          <span class="loop-n" style="--i:1;--a:-18deg"><svg class="ic"><use href="#i-check"/></svg><b>Accept</b></span>
+          <span class="loop-n" style="--i:2;--a:54deg"><svg class="ic"><use href="#c-general"/></svg><b>Complete</b></span>
+          <span class="loop-n" style="--i:3;--a:126deg"><svg class="ic"><use href="#i-wallet"/></svg><b>Earn</b></span>
+          <span class="loop-n" style="--i:4;--a:198deg"><svg class="ic"><use href="#i-repeat"/></svg><b>Repeat</b></span>
+        </div>
+      </article>
+
+      <!-- 8 · safety -->
+      <article class="tile tile--safety r" data-r data-spot>
+        <span class="tile-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></span>
+        <h3>Safety &amp; Support</h3>
+        <p>Track bookings, report issues and get support through the app.</p>
+        <span class="viz viz-trio" aria-hidden="true">
+          <i><svg class="ic"><use href="#i-route"/></svg></i><i><svg class="ic"><use href="#i-alert"/></svg></i><i><svg class="ic"><use href="#i-support"/></svg></i>
+        </span>
+      </article>
+
+      <!-- 9 · career -->
+      <article class="tile tile--career r" data-r data-spot>
+        <span class="tile-ic ic-yellow"><svg class="ic" aria-hidden="true"><use href="#i-career"/></svg></span>
+        <h3>Build Your Career Through SAPOTR</h3>
+        <p>Complete work, build your work history, and increase more opportunities</p>
+        <span class="viz viz-steps" aria-hidden="true"><i style="--d:.05s"></i><i style="--d:.15s"></i><i style="--d:.25s"></i><i style="--d:.35s"></i><b><svg class="ic"><use href="#i-star"/></svg></b></span>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ══════════ 5 · Services ══════════ -->
-<section class="section section--tint" id="services">
-  <div class="wrap services-head">
-    <div>
-      <p class="eyebrow r" data-r>Explore</p>
-      <h2 data-split>More Than One Kind of Work.</h2>
-    </div>
-    <div class="rail-nav r" data-r>
-      <button type="button" class="rail-btn" data-rail="-1" aria-label="Previous">←</button>
-      <button type="button" class="rail-btn" data-rail="1"  aria-label="Next">→</button>
-    </div>
-  </div>
+<!-- ══════════ 3 · Work types ══════════ -->
+<section class="section section--tint" id="work-types">
+  <div class="wrap wt-grid">
+    <div class="wt-side">
+      <h2 class="sec-title wt-title" data-split>More Work Types. <span class="hl">More Opportunities.</span> <span class="hl-red">More Earnings</span></h2>
 
-  <div class="rail r" data-r id="rail" tabindex="0" aria-label="Service categories — scroll or drag">
-    <ul class="rail-track">
-      <li class="card" data-tilt>
-        <span class="card-shot"><img src="assets/svc-home.jpg" alt="A uniformed home-help worker tidying a bedroom" width="1200" height="1500" loading="lazy" decoding="async"></span>
-        <div class="card-body">
-          <p class="card-kicker">01 · Home &amp; Personal</p>
-          <h3>Everyday household help</h3>
-          <p>Tidying, organising, cleaning.</p>
+      <div class="wt-tabs r" data-r role="tablist" aria-label="Work categories" aria-orientation="vertical" id="wt-tabs">
+        <button class="wt-tab" role="tab" id="wt-t1" aria-controls="wt-p1" aria-selected="true" type="button"><span class="wt-n">01</span><svg class="ic" aria-hidden="true"><use href="#c-hosp"/></svg><span class="wt-l">Hospitality</span></button>
+        <button class="wt-tab" role="tab" id="wt-t2" aria-controls="wt-p2" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">02</span><svg class="ic" aria-hidden="true"><use href="#c-retail"/></svg><span class="wt-l">Retail &amp; Shopping</span></button>
+        <button class="wt-tab" role="tab" id="wt-t3" aria-controls="wt-p3" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">03</span><svg class="ic" aria-hidden="true"><use href="#c-events"/></svg><span class="wt-l">Events &amp; Entertainment</span></button>
+        <button class="wt-tab" role="tab" id="wt-t4" aria-controls="wt-p4" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">04</span><svg class="ic" aria-hidden="true"><use href="#c-warehouse"/></svg><span class="wt-l">Warehousing &amp; Logistics</span></button>
+        <button class="wt-tab" role="tab" id="wt-t5" aria-controls="wt-p5" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">05</span><svg class="ic" aria-hidden="true"><use href="#c-delivery"/></svg><span class="wt-l">Delivery &amp; Driving</span></button>
+        <button class="wt-tab" role="tab" id="wt-t6" aria-controls="wt-p6" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">06</span><svg class="ic" aria-hidden="true"><use href="#c-moving"/></svg><span class="wt-l">Moving &amp; Setup</span></button>
+        <button class="wt-tab" role="tab" id="wt-t7" aria-controls="wt-p7" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">07</span><svg class="ic" aria-hidden="true"><use href="#c-cleaning"/></svg><span class="wt-l">Cleaning &amp; Facilities</span></button>
+        <button class="wt-tab" role="tab" id="wt-t8" aria-controls="wt-p8" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">08</span><svg class="ic" aria-hidden="true"><use href="#c-education"/></svg><span class="wt-l">Education &amp; Institutions</span></button>
+        <button class="wt-tab" role="tab" id="wt-t9" aria-controls="wt-p9" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">09</span><svg class="ic" aria-hidden="true"><use href="#c-general"/></svg><span class="wt-l">General Business Support / Any Other Business</span></button>
+      </div>
+    </div>
+
+    <div class="wt-panels r" data-r id="wt-panels">
+      <div class="wt-panel" id="wt-p1" role="tabpanel" aria-labelledby="wt-t1" tabindex="0">
+        <figure class="wt-media"><img src="assets/img/work-hospitality-760.webp" srcset="assets/img/work-hospitality-760.webp 760w, assets/img/work-hospitality-1400.webp 1400w" sizes="(max-width:1000px) 100vw, 720px" width="1400" height="700" loading="lazy" decoding="async" alt="A SAPOTR serving meals to smiling guests in a busy café"></figure>
+        <div class="wt-body">
+          <h3 class="wt-name"><span class="wt-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#c-hosp"/></svg></span>Hospitality</h3>
+          <ul class="wt-jobs">
+            <li>General Support Worker</li><li>Kitchen Hand</li><li>Wait Staff</li><li>Food Service Assistant</li><li>Catering Assistant</li>
+            <li>Table / Floor Support</li><li>Dishwashing / Stewarding</li><li>Front-of-House Support</li><li>Event Hospitality Support</li><li>Parking Management Support</li>
+          </ul>
         </div>
-      </li>
-      <li class="card" data-tilt>
-        <span class="card-shot"><img src="assets/svc-moving.jpg" alt="Two uniformed movers carrying boxes through a bright empty room" width="1200" height="1500" loading="lazy" decoding="async"></span>
-        <div class="card-body">
-          <p class="card-kicker">02 · Moving &amp; Shifting</p>
-          <h3>Hands on moving day</h3>
-          <p>Loading, unloading, setup.</p>
+      </div>
+
+      <div class="wt-panel" id="wt-p2" role="tabpanel" aria-labelledby="wt-t2" tabindex="0" hidden>
+        <figure class="wt-media"><img src="assets/img/work-retail-760.webp" srcset="assets/img/work-retail-760.webp 760w, assets/img/work-retail-1400.webp 1400w" sizes="(max-width:1000px) 100vw, 720px" width="1400" height="968" loading="lazy" decoding="async" alt="A SAPOTR shaking hands with a supermarket store manager"></figure>
+        <div class="wt-body">
+          <h3 class="wt-name"><span class="wt-ic ic-yellow"><svg class="ic" aria-hidden="true"><use href="#c-retail"/></svg></span>Retail &amp; Shopping</h3>
+          <ul class="wt-jobs">
+            <li>General Support Worker</li><li>Retail Assistant</li><li>Store Assistant</li><li>Shelf Filler</li><li>Stock Assistant</li>
+            <li>Checkout / Cashier Support</li><li>Click &amp; Collect / Order Support</li><li>Customer Service Assistant</li><li>Parking Management Support</li>
+          </ul>
         </div>
-      </li>
-      <li class="card" data-tilt>
-        <span class="card-shot"><img src="assets/svc-events.jpg" alt="A waiter pouring wine at a set banquet table" width="1200" height="1500" loading="lazy" decoding="async"></span>
-        <div class="card-body">
-          <p class="card-kicker">03 · Events &amp; Celebrations</p>
-          <h3>Cover for the big night</h3>
-          <p>Functions, parties, service.</p>
+      </div>
+
+      <div class="wt-panel" id="wt-p3" role="tabpanel" aria-labelledby="wt-t3" tabindex="0" hidden>
+        <figure class="wt-media"><img src="assets/img/work-events-760.webp" srcset="assets/img/work-events-760.webp 760w, assets/img/work-events-1200.webp 1200w" sizes="(max-width:1000px) 100vw, 720px" width="1200" height="800" loading="lazy" decoding="async" alt="A server pouring wine at a set banquet table before an event"></figure>
+        <div class="wt-body">
+          <h3 class="wt-name"><span class="wt-ic ic-red"><svg class="ic" aria-hidden="true"><use href="#c-events"/></svg></span>Events &amp; Entertainment</h3>
+          <ul class="wt-jobs">
+            <li>General Support Worker</li><li>Event Assistant</li><li>Event Setup Assistant</li><li>Pack-Down Assistant</li><li>Guest / Venue Support</li><li>Ticketing Support</li>
+            <li>Registration / Check-In Assistant</li><li>Promotion Assistant</li><li>Event Crew</li><li>Volunteers</li><li>Parking Management Support</li>
+          </ul>
         </div>
-      </li>
-      <li class="card" data-tilt>
-        <span class="card-shot"><img src="assets/svc-apartments.jpg" alt="A facilities worker cleaning glass in an apartment common area" width="1200" height="1500" loading="lazy" decoding="async"></span>
-        <div class="card-body">
-          <p class="card-kicker">04 · Apartments &amp; Communities</p>
-          <h3>Support for shared spaces</h3>
-          <p>Common areas, residents, events.</p>
+      </div>
+
+      <div class="wt-panel" id="wt-p4" role="tabpanel" aria-labelledby="wt-t4" tabindex="0" hidden>
+        <figure class="wt-media"><img src="assets/img/work-warehouse-760.webp" srcset="assets/img/work-warehouse-760.webp 760w, assets/img/work-warehouse-1400.webp 1400w" sizes="(max-width:1000px) 100vw, 720px" width="1400" height="700" loading="lazy" decoding="async" alt="SAPOTRs packing and taping boxes on a warehouse conveyor"></figure>
+        <div class="wt-body">
+          <h3 class="wt-name"><span class="wt-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#c-warehouse"/></svg></span>Warehousing &amp; Logistics</h3>
+          <ul class="wt-jobs">
+            <li>General Support Worker</li><li>Warehouse Assistant</li><li>Picker / Packer</li><li>Packing Assistant</li><li>Loading &amp; Unloading Assistant</li>
+            <li>Stock Handler</li><li>Dispatch Assistant</li><li>Warehouse Support</li><li>Inventory / Stock Support</li>
+          </ul>
         </div>
-      </li>
-      <li class="card" data-tilt>
-        <span class="card-shot"><img src="assets/svc-maintenance.jpg" alt="A tradesperson working with tools at a workbench" width="1200" height="1500" loading="lazy" decoding="async"></span>
-        <div class="card-body">
-          <p class="card-kicker">05 · Maintenance &amp; Upkeep</p>
-          <h3>Keep the place running</h3>
-          <p>Repairs, upkeep, cleaning.</p>
+      </div>
+
+      <div class="wt-panel" id="wt-p5" role="tabpanel" aria-labelledby="wt-t5" tabindex="0" hidden>
+        <figure class="wt-media"><img src="assets/img/work-delivery-760.webp" srcset="assets/img/work-delivery-760.webp 760w, assets/img/work-delivery-1400.webp 1400w" sizes="(max-width:1000px) 100vw, 720px" width="1400" height="933" loading="lazy" decoding="async" alt="A SAPOTR at the wheel giving a thumbs up, a navigation app on the dashboard phone"></figure>
+        <div class="wt-body">
+          <h3 class="wt-name"><span class="wt-ic ic-yellow"><svg class="ic" aria-hidden="true"><use href="#c-delivery"/></svg></span>Delivery &amp; Driving</h3>
+          <p class="wt-flag"><svg class="ic" aria-hidden="true"><use href="#i-id"/></svg>Need Valid License</p>
+          <ul class="wt-jobs">
+            <li>Delivery Driver</li><li>Courier Driver</li><li>Delivery Assistant</li><li>Driver Assistant</li>
+            <li>Parcel Sorting Assistant</li><li>Loading &amp; Unloading Assistant</li><li>Last-Mile Support</li><li>General Support Worker</li>
+          </ul>
         </div>
-      </li>
-    </ul>
+      </div>
+
+      <div class="wt-panel" id="wt-p6" role="tabpanel" aria-labelledby="wt-t6" tabindex="0" hidden>
+        <figure class="wt-media"><img src="assets/img/work-moving-760.webp" srcset="assets/img/work-moving-760.webp 760w, assets/img/work-moving-1200.webp 1200w" sizes="(max-width:1000px) 100vw, 720px" width="1200" height="800" loading="lazy" decoding="async" alt="Two movers carrying boxes through a bright empty room"></figure>
+        <div class="wt-body">
+          <h3 class="wt-name"><span class="wt-ic ic-red"><svg class="ic" aria-hidden="true"><use href="#c-moving"/></svg></span>Moving &amp; Setup</h3>
+          <ul class="wt-jobs">
+            <li>General Moving Support</li><li>Moving Assistant</li><li>Loading Assistant</li><li>Unloading Assistant</li>
+            <li>Furniture / Goods Handling Assistant</li><li>Setup Assistant</li><li>Pack-Down Assistant</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wt-panel" id="wt-p7" role="tabpanel" aria-labelledby="wt-t7" tabindex="0" hidden>
+        <figure class="wt-media"><img src="assets/img/work-cleaning-760.webp" srcset="assets/img/work-cleaning-760.webp 760w, assets/img/work-cleaning-1200.webp 1200w" sizes="(max-width:1000px) 100vw, 720px" width="1200" height="800" loading="lazy" decoding="async" alt="A facilities worker cleaning high glass in a bright building"></figure>
+        <div class="wt-body">
+          <h3 class="wt-name"><span class="wt-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#c-cleaning"/></svg></span>Cleaning &amp; Facilities</h3>
+          <ul class="wt-jobs">
+            <li>General Maintenance Support</li><li>Cleaner</li><li>Cleaning Assistant</li><li>Property Cleaning Assistant</li>
+            <li>Facility Support Assistant</li><li>Event Cleanup Assistant</li><li>Housekeeping Assistant</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wt-panel" id="wt-p8" role="tabpanel" aria-labelledby="wt-t8" tabindex="0" hidden>
+        <figure class="wt-media"><img src="assets/img/work-education-760.webp" srcset="assets/img/work-education-760.webp 760w, assets/img/work-education-1400.webp 1400w" sizes="(max-width:1000px) 100vw, 720px" width="1400" height="933" loading="lazy" decoding="async" alt="A SAPOTR handing out brochures at a school community event check-in table"></figure>
+        <div class="wt-body">
+          <h3 class="wt-name"><span class="wt-ic ic-yellow"><svg class="ic" aria-hidden="true"><use href="#c-education"/></svg></span>Education &amp; Institutions</h3>
+          <ul class="wt-jobs">
+            <li>General Support Assistant</li><li>Event Assistant</li><li>Setup / Pack-Down Assistant</li>
+            <li>Facility Support</li><li>Grounds Support</li><li>Kitchen / Canteen Assistant</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="wt-panel" id="wt-p9" role="tabpanel" aria-labelledby="wt-t9" tabindex="0" hidden>
+        <figure class="wt-media"><img src="assets/img/work-general-760.webp" srcset="assets/img/work-general-760.webp 760w, assets/img/work-general-1400.webp 1400w" sizes="(max-width:1000px) 100vw, 720px" width="1400" height="948" loading="lazy" decoding="async" alt="A SAPOTR shaking hands with a business manager on arrival"></figure>
+        <div class="wt-body">
+          <h3 class="wt-name"><span class="wt-ic ic-red"><svg class="ic" aria-hidden="true"><use href="#c-general"/></svg></span>General Business Support / Any Other Business</h3>
+          <ul class="wt-jobs">
+            <li>General Support Worker</li><li>General Assistant</li><li>Office Support Assistant</li><li>Admin Support</li><li>Packing Assistant</li>
+            <li>Stock Support</li><li>Customer Service Support</li><li>Event Support</li><li>General Labour / Helper</li><li>Volunteer</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="wrap"><div class="dots" id="rail-dots" aria-hidden="true"></div></div>
 </section>
 
-<!-- ══════════ 6 · Numbers ══════════ -->
-<section class="section section--dark" id="numbers">
+<!-- ══════════ 4 · Safety ══════════ -->
+<section class="section" id="safety">
+  <div class="wrap">
+    <div class="safe-head">
+      <h2 class="sec-title safe-title" data-split>Your Safety Comes First. <span class="hl">Verified Before You Work.</span> Supported While You Work.</h2>
+      <span class="safe-badge r" data-r aria-hidden="true"><svg class="ic"><use href="#i-shield"/></svg></span>
+    </div>
+
+    <div class="safe-grid" id="safe-grid">
+      <article class="safe r" data-r data-tilt>
+        <div class="safe-viz sv-id" aria-hidden="true">
+          <span class="sv-card"><span class="sv-av"></span><span class="sv-lines"><i></i><i></i><i></i></span></span>
+          <span class="sv-tick sv-tick--1"><svg class="ic"><use href="#i-check"/></svg></span>
+          <span class="sv-tick sv-tick--2"><svg class="ic"><use href="#i-check"/></svg></span>
+        </div>
+        <span class="safe-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#i-id"/></svg></span>
+        <h3>Identity &amp; Right-to-Work Verification</h3>
+        <p>Required identity and work-eligibility checks are completed before activation.</p>
+      </article>
+
+      <article class="safe r" data-r data-tilt>
+        <div class="safe-viz sv-bg" aria-hidden="true">
+          <span class="sv-doc"><i></i><i></i><i></i><i></i></span>
+          <span class="sv-scan"></span>
+          <span class="sv-shield"><svg class="ic"><use href="#i-shield"/></svg></span>
+        </div>
+        <span class="safe-ic ic-yellow"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span>
+        <h3>Police / Background Verification</h3>
+        <p>Applicable verification checks are completed where required.</p>
+      </article>
+
+      <article class="safe r" data-r data-tilt>
+        <div class="safe-viz sv-track" aria-hidden="true">
+          <svg class="sv-route" viewBox="0 0 240 90" preserveAspectRatio="none"><path d="M18 64C70 64 70 26 120 26s50 38 102 38"/></svg>
+          <span class="sv-stop sv-stop--1"><i></i>On the way</span>
+          <span class="sv-stop sv-stop--2"><i></i>Arriving</span>
+          <span class="sv-stop sv-stop--3"><i></i>Working</span>
+        </div>
+        <span class="safe-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#i-route"/></svg></span>
+        <h3>Booking Tracking</h3>
+        <p>Your booking journey can be tracked through the app while you are on the way, arriving and working.</p>
+      </article>
+
+      <article class="safe r" data-r data-tilt>
+        <div class="safe-viz sv-sos" aria-hidden="true">
+          <span class="sv-ring"></span><span class="sv-ring sv-ring--2"></span>
+          <span class="sv-btn">SOS</span>
+          <span class="sv-hazard"><svg class="ic"><use href="#i-alert"/></svg></span>
+        </div>
+        <span class="safe-ic ic-red"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg></span>
+        <h3>SOS &amp; Hazard Reporting</h3>
+        <p>See a hazard or feel unsafe? Report it immediately through the app and get support</p>
+      </article>
+    </div>
+    <div class="dots" id="safe-dots" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ══════════ 5 · Why people choose SAPOTR ══════════ -->
+<section class="section why" id="why">
+  <div class="why-art" aria-hidden="true">
+    <span class="why-blob why-blob--c"></span><span class="why-blob why-blob--y"></span><span class="why-blob why-blob--r"></span>
+    <svg class="why-swoosh" viewBox="0 0 600 400" preserveAspectRatio="none">
+      <path class="sw-y" d="M-20 300C120 180 260 360 420 200S620 120 640 60"/>
+      <path class="sw-r" d="M-20 340C140 230 280 400 440 250S620 170 640 120"/>
+      <path class="sw-c" d="M-20 380C150 280 300 440 460 300S620 220 640 180"/>
+    </svg>
+    <span class="why-dots"></span>
+  </div>
+
+  <div class="wrap why-grid">
+    <div class="why-figure r" data-r>
+      <span class="why-disc" aria-hidden="true"></span>
+      <img class="why-person" src="assets/img/sapotr-flex.webp" width="604" height="1000" loading="lazy" decoding="async"
+           alt="A SAPOTR with a backpack, smiling and flexing his arm">
+    </div>
+
+    <div class="why-copy">
+      <h2 class="sec-title" data-split>Why People Choose <span class="hl">SAPOTR</span></h2>
+      <div class="quotes">
+        <figure class="quote quote--c r" data-r data-tilt>
+          <span class="quote-ic" aria-hidden="true"><svg class="ic"><use href="#i-book"/></svg></span>
+          <blockquote>“I wanted flexible work around my studies.”</blockquote>
+        </figure>
+        <figure class="quote quote--y r" data-r data-tilt>
+          <span class="quote-ic" aria-hidden="true"><svg class="ic"><use href="#i-cash"/></svg></span>
+          <blockquote>“I wanted extra income without committing to a full-time job.”</blockquote>
+        </figure>
+        <figure class="quote quote--r r" data-r data-tilt>
+          <span class="quote-ic" aria-hidden="true"><svg class="ic"><use href="#i-hand"/></svg></span>
+          <blockquote>“I like being able to choose the work I take.”</blockquote>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ 6 · Growing across NZ ══════════ -->
+<section class="section section--dark grow" id="growth">
+  <svg class="grow-map" viewBox="-200 -120 1800 1200" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <use href="#akl-land" fill="#131C47"/>
+    <use href="#akl-land" fill="url(#m-dots)"/>
+    <use href="#akl-water" fill="#0F1738"/>
+  </svg>
   <span class="glow glow--a" aria-hidden="true"></span>
   <span class="glow glow--b" aria-hidden="true"></span>
-  <div class="wrap">
-    <p class="eyebrow eyebrow--gold r" data-r>Impact</p>
-    <h2 data-split>Built for NZ. Growing every day.</h2>
 
-    <div class="stats" id="stats">
-      <div class="stat r" data-r><span class="stat-n" data-count="500">0</span><span class="stat-l">Verified Employees</span></div>
-      <div class="stat r" data-r><span class="stat-n" data-count="350">0</span><span class="stat-l">Businesses</span></div>
-      <div class="stat r" data-r><span class="stat-n" data-count="2800">0</span><span class="stat-l">Bookings</span></div>
-      <div class="stat r" data-r><span class="stat-n" data-count="18000">0</span><span class="stat-l">Hours</span></div>
-      <div class="stat r" data-r><span class="stat-n" data-count="700">0</span><span class="stat-l">Secure Payments</span></div>
+  <div class="wrap">
+    <div class="grow-head">
+      <h2 data-split>Growing Across NZ.</h2>
+      <p class="grow-sub r" data-r>Be Part of a Growing Community of SAPOTRs.</p>
     </div>
+
+    <dl class="stats" id="stats">
+      <div class="stat stat--c r" data-r><dt>Verified SAPOTRs</dt><dd><b data-count="260">260</b><i>+</i></dd></div>
+      <div class="stat stat--y r" data-r><dt>Businesses on SAPOTR</dt><dd><b data-count="110">110</b><i>+</i></dd></div>
+      <div class="stat stat--r r" data-r><dt>Hours of Work Supported</dt><dd><b data-count="1100">1100</b><i>+</i></dd></div>
+      <div class="stat stat--c r" data-r><dt>Bookings Completed</dt><dd><b data-count="450">450</b><i>+</i></dd></div>
+    </dl>
   </div>
 </section>
 
-<!-- ══════════ 7 · Stories ══════════ -->
-<section class="section" id="stories">
+<!-- ══════════ 7 · Become a SAPOTR ══════════ -->
+<section class="section" id="become">
   <div class="wrap">
-    <p class="eyebrow r" data-r>Customer stories</p>
-    <h2 data-split>Real Stories. Real Help.</h2>
+    <h2 class="sec-title sec-title--center" data-split>Become a <span class="hl">SAPOTR</span> in <span class="hl-red">3</span> Simple Steps</h2>
 
-    <div class="stories">
-      <figure class="story r" data-r data-tilt>
-        <p class="stars" aria-label="Rated 5 out of 5">★★★★★</p>
-        <blockquote>Covered a busy weekend without hours of searching.</blockquote>
-        <figcaption>
-          <img src="assets/story-retail.jpg" alt="Portrait of Mark O., retail store owner" width="52" height="52" loading="lazy">
-          <span><strong>Mark O.</strong><em>Retail Owner · Papakura</em></span>
-        </figcaption>
-      </figure>
-      <figure class="story r" data-r data-tilt>
-        <p class="stars" aria-label="Rated 5 out of 5">★★★★★</p>
-        <blockquote>Two people, booked the night before. Both on time.</blockquote>
-        <figcaption>
-          <img src="assets/story-cafe.jpg" alt="Portrait of Hannah B., café manager" width="52" height="52" loading="lazy">
-          <span><strong>Hannah B.</strong><em>Café Manager · Newmarket</em></span>
-        </figcaption>
-      </figure>
-      <figure class="story r" data-r data-tilt>
-        <p class="stars" aria-label="Rated 5 out of 5">★★★★★</p>
-        <blockquote>Simple pricing. We only pay for hours worked.</blockquote>
-        <figcaption>
-          <img src="assets/story-showroom.jpg" alt="Portrait of Mei L., showroom owner" width="52" height="52" loading="lazy">
-          <span><strong>Mei L.</strong><em>Showroom Owner · Takanini</em></span>
-        </figcaption>
-      </figure>
-    </div>
+    <ol class="journey" id="journey">
+      <li class="step r" data-r>
+        <div class="step-viz sx-1" aria-hidden="true">
+          <div class="mini-phone">
+            <span class="mp-app"><img src="assets/img/logo-mark-256.webp" alt="" width="256" height="202" loading="lazy"></span>
+            <span class="mp-name">SAPOTR Partner App</span>
+            <span class="mp-dl"><svg class="ic"><use href="#i-download"/></svg></span>
+            <span class="mp-row" style="--i:0"><svg class="ic"><use href="#i-check"/></svg>Sign up</span>
+            <span class="mp-row" style="--i:1"><svg class="ic"><use href="#i-check"/></svg>Verification</span>
+            <span class="mp-badge"><svg class="ic"><use href="#i-shield"/></svg>Verified SAPOTR</span>
+          </div>
+        </div>
+        <span class="step-n" aria-hidden="true">01</span>
+        <h3>Download the SAPOTR Partner App</h3>
+        <p>Sign up, complete verification and become a verified SAPOTR.</p>
+      </li>
+
+      <li class="step r" data-r>
+        <div class="step-viz sx-2" aria-hidden="true">
+          <div class="mini-phone">
+            <span class="mp-days"><i>M</i><i class="on">T</i><i>W</i><i class="on">T</i><i>F</i><i class="on">S</i><i class="on">S</i></span>
+            <span class="mp-job">
+              <span class="ocard-ic ic-cyan"><svg class="ic"><use href="#c-retail"/></svg></span>
+              <span class="ocard-t"><small>Retail &amp; Shopping</small><b>Stock Assistant</b></span>
+            </span>
+            <span class="mp-accept"><svg class="ic"><use href="#i-check"/></svg>Accept</span>
+          </div>
+        </div>
+        <span class="step-n" aria-hidden="true">02</span>
+        <h3>Receive &amp; Accept Work</h3>
+        <p>Set your availability. Receive suitable short-term work opportunities and accept the ones you want.</p>
+      </li>
+
+      <li class="step r" data-r>
+        <div class="step-viz sx-3" aria-hidden="true">
+          <div class="mini-phone">
+            <span class="mp-done"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="22"/><path d="M15 27l7 7 15-16"/></svg></span>
+            <span class="mp-stars"><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg><svg class="ic"><use href="#i-star"/></svg></span>
+            <span class="mp-row"><svg class="ic"><use href="#i-wallet"/></svg>Earn</span>
+            <span class="mp-hist"><i style="--h:40%"></i><i style="--h:55%"></i><i style="--h:48%"></i><i style="--h:72%"></i><i style="--h:88%"></i></span>
+          </div>
+        </div>
+        <span class="step-n" aria-hidden="true">03</span>
+        <h3>Work, Earn &amp; Get Rated</h3>
+        <p>Complete the assigned work, earn your pay, get rated and build your work history.</p>
+      </li>
+    </ol>
   </div>
 </section>
 
 <!-- ══════════ 8 · FAQ ══════════ -->
-<section class="section faq" id="faq">
-  <div class="faq-media" aria-hidden="true">
-    <img src="assets/faq-bg.jpg" alt="" width="2400" height="1350" loading="lazy" decoding="async">
-    <span class="faq-scrim"></span>
-  </div>
-  <div class="wrap wrap--narrow faq-inner">
-    <p class="eyebrow r" data-r>FAQ</p>
-    <h2 data-split>Questions, Answered.</h2>
+<section class="section section--tint faq" id="faq">
+  <div class="wrap">
+    <h2 class="sec-title sec-title--center faq-title" data-split>FAQ</h2>
 
     <div class="acc" id="acc">
-      <div class="acc-i r" data-r>
-        <h3><button class="acc-q" aria-expanded="false" aria-controls="a1" id="q1">What is SAPOTR?<span class="acc-x" aria-hidden="true"></span></button></h3>
-        <div class="acc-a" id="a1" role="region" aria-labelledby="q1"><div><p>An on-demand workforce platform. Businesses book verified employees for short-term, one-day or same-day work, straight from the app.</p></div></div>
+      <div class="acc-col">
+        <div class="acc-i r" data-r>
+          <h3><button class="acc-q" type="button" aria-expanded="false" aria-controls="a1" id="q1"><span class="acc-n">01</span>What is SAPOTR?<span class="acc-x" aria-hidden="true"></span></button></h3>
+          <div class="acc-a" id="a1" role="region" aria-labelledby="q1"><div><p>SAPOTR is a technology platform that gives you direct access to short-term work opportunities from businesses.</p></div></div>
+        </div>
+        <div class="acc-i r" data-r>
+          <h3><button class="acc-q" type="button" aria-expanded="false" aria-controls="a2" id="q2"><span class="acc-n">02</span>How do I receive new work opportunities?<span class="acc-x" aria-hidden="true"></span></button></h3>
+          <div class="acc-a" id="a2" role="region" aria-labelledby="q2"><div><p>Sign up and complete your profile. Suitable work opportunities are sent directly to your SAPOTR Partner app.</p></div></div>
+        </div>
+        <div class="acc-i r" data-r>
+          <h3><button class="acc-q" type="button" aria-expanded="false" aria-controls="a3" id="q3"><span class="acc-n">03</span>Do I need experience?<span class="acc-x" aria-hidden="true"></span></button></h3>
+          <div class="acc-a" id="a3" role="region" aria-labelledby="q3"><div><p>No. Many opportunities involve common, general work and do not require special skills.</p></div></div>
+        </div>
+        <div class="acc-i r" data-r>
+          <h3><button class="acc-q" type="button" aria-expanded="false" aria-controls="a4" id="q4"><span class="acc-n">04</span>Can students and part-timers join?<span class="acc-x" aria-hidden="true"></span></button></h3>
+          <div class="acc-a" id="a4" role="region" aria-labelledby="q4"><div><p>Yes. Students, part-timers, weekend workers, night-shift workers, experienced workers and newcomers can join, subject to eligibility.</p></div></div>
+        </div>
+        <div class="acc-i r" data-r>
+          <h3><button class="acc-q" type="button" aria-expanded="false" aria-controls="a5" id="q5"><span class="acc-n">05</span>Can I choose when I work?<span class="acc-x" aria-hidden="true"></span></button></h3>
+          <div class="acc-a" id="a5" role="region" aria-labelledby="q5"><div><p>Yes. Choose the days, shifts and hours that suit your availability.</p></div></div>
+        </div>
+        <div class="acc-i r" data-r>
+          <h3><button class="acc-q" type="button" aria-expanded="false" aria-controls="a6" id="q6"><span class="acc-n">06</span>Can I accept work from different industries?<span class="acc-x" aria-hidden="true"></span></button></h3>
+          <div class="acc-a" id="a6" role="region" aria-labelledby="q6"><div><p>Yes. Choose work across multiple industries and select the types of work you prefer.</p></div></div>
+        </div>
       </div>
-      <div class="acc-i r" data-r>
-        <h3><button class="acc-q" aria-expanded="false" aria-controls="a2" id="q2">How quickly can I book?<span class="acc-x" aria-hidden="true"></span></button></h3>
-        <div class="acc-a" id="a2" role="region" aria-labelledby="q2"><div><p>Same-day bookings are usually matched within minutes. You see who is available nearby before confirming.</p></div></div>
-      </div>
-      <div class="acc-i r" data-r>
-        <h3><button class="acc-q" aria-expanded="false" aria-controls="a3" id="q3">Are employees verified?<span class="acc-x" aria-hidden="true"></span></button></h3>
-        <div class="acc-a" id="a3" role="region" aria-labelledby="q3"><div><p>Yes. Identity and work-eligibility checks are completed before any partner can accept a booking, and rating history stays visible.</p></div></div>
-      </div>
-      <div class="acc-i r" data-r>
-        <h3><button class="acc-q" aria-expanded="false" aria-controls="a4" id="q4">How does pricing work?<span class="acc-x" aria-hidden="true"></span></button></h3>
-        <div class="acc-a" id="a4" role="region" aria-labelledby="q4"><div><p>Flat hourly rates shown up front, no hidden charges. You pay for actual work time — breaks excluded.</p></div></div>
-      </div>
-      <div class="acc-i r" data-r>
-        <h3><button class="acc-q" aria-expanded="false" aria-controls="a5" id="q5">Can I schedule in advance?<span class="acc-x" aria-hidden="true"></span></button></h3>
-        <div class="acc-a" id="a5" role="region" aria-labelledby="q5"><div><p>Yes. Switch from <em>Now</em> to <em>Schedule</em> and pick a date and time.</p></div></div>
-      </div>
-      <div class="acc-i r" data-r>
-        <h3><button class="acc-q" aria-expanded="false" aria-controls="a6" id="q6">What work can I book for?<span class="acc-x" aria-hidden="true"></span></button></h3>
-        <div class="acc-a" id="a6" role="region" aria-labelledby="q6"><div><p>Retail, restaurants, hotels, showrooms, apartments and communities, events, moving and shifting, maintenance, property upkeep, and home or personal support.</p></div></div>
-      </div>
-      <div class="acc-i r" data-r>
-        <h3><button class="acc-q" aria-expanded="false" aria-controls="a7" id="q7">Can I book more than one?<span class="acc-x" aria-hidden="true"></span></button></h3>
-        <div class="acc-a" id="a7" role="region" aria-labelledby="q7"><div><p>Yes. Set how many you need and each is matched separately, so bigger jobs still fill fast.</p></div></div>
+
+      <div class="acc-col">
+        <div class="acc-i r" data-r>
+          <h3><button class="acc-q" type="button" aria-expanded="false" aria-controls="a7" id="q7"><span class="acc-n">07</span>How long are the jobs?<span class="acc-x" aria-hidden="true"></span></button></h3>
+          <div class="acc-a" id="a7" role="region" aria-labelledby="q7"><div><p>SAPOTR offers short-term work, from 4 hours up to 12 hours per booking.</p></div></div>
+        </div>
+        <div class="acc-i r" data-r>
+          <h3><button class="acc-q" type="button" aria-expanded="false" aria-controls="a8" id="q8"><span class="acc-n">08</span>How do I get paid?<span class="acc-x" aria-hidden="true"></span></button></h3>
+          <div class="acc-a" id="a8" role="region" aria-labelledby="q8"><div><p>You get paid through SAPOTR once a week, every Friday.</p></div></div>
+        </div>
+        <div class="acc-i r" data-r>
+          <h3><button class="acc-q" type="button" aria-expanded="false" aria-controls="a9" id="q9"><span class="acc-n">09</span>What verification is required?<span class="acc-x" aria-hidden="true"></span></button></h3>
+          <div class="acc-a" id="a9" role="region" aria-labelledby="q9"><div><p>SAPOTR completes the required identity, work-eligibility and other applicable checks before you become available for bookings.</p></div></div>
+        </div>
+        <div class="acc-i r" data-r>
+          <h3><button class="acc-q" type="button" aria-expanded="false" aria-controls="a10" id="q10"><span class="acc-n">10</span>Is SAPOTR a Job Board or Recruitment Agency?<span class="acc-x" aria-hidden="true"></span></button></h3>
+          <div class="acc-a" id="a10" role="region" aria-labelledby="q10"><div><p>No. SAPOTR is a technology platform, not a job board or agency. No job searching, applications, interview waiting or follow-ups. Receive work opportunities directly in the app, then Accept. Work. Earn. Repeat.</p></div></div>
+        </div>
+        <div class="acc-i r" data-r>
+          <h3><button class="acc-q" type="button" aria-expanded="false" aria-controls="a11" id="q11"><span class="acc-n">11</span>How much will I earn per hour?<span class="acc-x" aria-hidden="true"></span></button></h3>
+          <div class="acc-a" id="a11" role="region" aria-labelledby="q11"><div><p>SAPOTR uses a predefined flat hourly rate shown in the platform. The rate is fixed and is not negotiated for each booking.</p></div></div>
+        </div>
+        <div class="acc-i r" data-r>
+          <h3><button class="acc-q" type="button" aria-expanded="false" aria-controls="a12" id="q12"><span class="acc-n">12</span>Is there any fee to join SAPOTR?<span class="acc-x" aria-hidden="true"></span></button></h3>
+          <div class="acc-a" id="a12" role="region" aria-labelledby="q12"><div><p>No. There is no fee to join SAPOTR.</p></div></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ══════════ 9 · Final CTA ══════════ -->
-<section class="section cta" id="book">
+<section class="cta" id="join">
   <div class="cta-media" aria-hidden="true">
-    <img src="assets/cta-bg.jpg" alt="" width="2400" height="1350" loading="lazy" decoding="async">
+    <img src="assets/img/cta-team-1400.webp" srcset="assets/img/cta-team-760.webp 760w, assets/img/cta-team-1400.webp 1342w"
+         sizes="100vw" width="1342" height="570" alt="" loading="lazy" decoding="async">
     <span class="cta-scrim"></span>
+    <svg class="cta-swoosh" viewBox="0 0 600 400" preserveAspectRatio="none">
+      <path class="sw-y" d="M-20 300C120 180 260 360 420 200S620 120 640 60"/>
+      <path class="sw-r" d="M-20 340C140 230 280 400 440 250S620 170 640 120"/>
+      <path class="sw-c" d="M-20 380C150 280 300 440 460 300S620 220 640 180"/>
+    </svg>
   </div>
 
-  <div class="wrap wrap--narrow cta-inner">
-    <h2 data-split>Don’t Go Back to Calls, Searching &amp; Waiting.</h2>
-    <p class="section-sub section-sub--light r" data-r>Book a SAPOTR.</p>
-
-    <form class="cta-form r" data-r id="cta-form" novalidate>
-      <button class="btn btn--accent btn--block magnet" type="submit">Book an Employee</button>
-      <p class="cta-note" role="status" id="cta-note"></p>
-    </form>
+  <div class="wrap cta-inner">
+    <h2 data-split>Ready to <span class="hl">Work, Earn &amp; Grow</span> With SAPOTR?</h2>
+    <div class="r" data-r>
+      <a class="btn btn--accent btn--xl magnet" href="#become">Become a SAPOTR<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
   </div>
 </section>
 
@@ -516,42 +929,43 @@
     <div class="foot-top">
       <div class="foot-brand">
         <img src="assets/logo-wordmark-light.png" alt="SAPOTR" width="140" height="34" loading="lazy">
-        <p>Extra hands. Right when you need them.</p>
+        <p>NZ’s Last-Minute Staff Support Platform.</p>
       </div>
 
       <nav class="foot-jump" aria-label="Jump to a section">
-        <a href="#how-it-works">How it works</a>
-        <a href="#services">Services</a>
-        <a href="#why">Why SAPOTR</a>
+        <a href="#benefits">How it Benefits You</a>
+        <a href="#work-types">Work Types</a>
+        <a href="#become">Become a SAPOTR</a>
         <a href="#faq">FAQ</a>
-        <a href="#book">Book an Employee</a>
       </nav>
     </div>
 
     <div class="foot-contact">
       <div>
-        <h2>Contact</h2>
+        <h2>SAPOTR Pvt Ltd</h2>
         <address>
-          SAPOTR Pvt Ltd<br>
-          3 Kairakau Street, Takanini<br>
-          Auckland 2110, New Zealand
+          3 Kairakau Street,<br>
+          Takanini,<br>
+          Auckland, 2110, NZ
         </address>
       </div>
       <div>
-        <h2>Get in touch</h2>
-        <p><a href="mailto:admin@sapotr.co.nz">admin@sapotr.co.nz</a><br>
-           <a href="tel:+64212387544">+64 21 238 7544</a><br>
-           www.sapotr.co.nz</p>
+        <h2>Email</h2>
+        <p><a href="mailto:admin@sapotr.co.nz">admin@sapotr.co.nz</a></p>
       </div>
       <div>
-        <h2>Apps</h2>
-        <p class="soon">App Store &amp; Google Play<br><em>Coming soon</em></p>
+        <h2>Phone</h2>
+        <p><a href="tel:+64212387544">+64 21 238 7544</a></p>
+      </div>
+      <div>
+        <h2>Website</h2>
+        <p><a href="https://www.sapotr.co.nz">www.sapotr.co.nz</a></p>
       </div>
     </div>
 
     <div class="foot-bottom">
       <p class="copy">© <span id="year">2026</span> SAPOTR Pvt Ltd. All rights reserved.</p>
-      <p class="copy">Verified on-demand workforce · New Zealand</p>
+      <a class="foot-top-link" href="#top">Back to top<svg class="ic" aria-hidden="true"><use href="#i-chev-r"/></svg></a>
     </div>
   </div>
 </footer>
@@ -559,27 +973,31 @@
 <script type="application/ld+json">
 {
   "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"What is SAPOTR?","acceptedAnswer":{"@type":"Answer","text":"An on-demand workforce platform. Businesses book verified employees for short-term, one-day or same-day work, straight from the app."}},
-  {"@type":"Question","name":"How quickly can I book?","acceptedAnswer":{"@type":"Answer","text":"Same-day bookings are usually matched within minutes. You see who is available nearby before confirming."}},
-  {"@type":"Question","name":"Are employees verified?","acceptedAnswer":{"@type":"Answer","text":"Yes. Identity and work-eligibility checks are completed before any partner can accept a booking, and rating history stays visible."}},
-  {"@type":"Question","name":"How does pricing work?","acceptedAnswer":{"@type":"Answer","text":"Flat hourly rates shown up front, no hidden charges. You pay for actual work time — breaks excluded."}},
-  {"@type":"Question","name":"Can I schedule in advance?","acceptedAnswer":{"@type":"Answer","text":"Yes. Switch from Now to Schedule and pick a date and time."}},
-  {"@type":"Question","name":"What work can I book for?","acceptedAnswer":{"@type":"Answer","text":"Retail, restaurants, hotels, showrooms, apartments and communities, events, moving and shifting, maintenance, property upkeep, and home or personal support."}},
-  {"@type":"Question","name":"Can I book more than one?","acceptedAnswer":{"@type":"Answer","text":"Yes. Set how many you need and each is matched separately, so bigger jobs still fill fast."}}]
+  {"@type":"Question","name":"What is SAPOTR?","acceptedAnswer":{"@type":"Answer","text":"SAPOTR is a technology platform that gives you direct access to short-term work opportunities from businesses."}},
+  {"@type":"Question","name":"How do I receive new work opportunities?","acceptedAnswer":{"@type":"Answer","text":"Sign up and complete your profile. Suitable work opportunities are sent directly to your SAPOTR Partner app."}},
+  {"@type":"Question","name":"Do I need experience?","acceptedAnswer":{"@type":"Answer","text":"No. Many opportunities involve common, general work and do not require special skills."}},
+  {"@type":"Question","name":"Can students and part-timers join?","acceptedAnswer":{"@type":"Answer","text":"Yes. Students, part-timers, weekend workers, night-shift workers, experienced workers and newcomers can join, subject to eligibility."}},
+  {"@type":"Question","name":"Can I choose when I work?","acceptedAnswer":{"@type":"Answer","text":"Yes. Choose the days, shifts and hours that suit your availability."}},
+  {"@type":"Question","name":"Can I accept work from different industries?","acceptedAnswer":{"@type":"Answer","text":"Yes. Choose work across multiple industries and select the types of work you prefer."}},
+  {"@type":"Question","name":"How long are the jobs?","acceptedAnswer":{"@type":"Answer","text":"SAPOTR offers short-term work, from 4 hours up to 12 hours per booking."}},
+  {"@type":"Question","name":"How do I get paid?","acceptedAnswer":{"@type":"Answer","text":"You get paid through SAPOTR once a week, every Friday."}},
+  {"@type":"Question","name":"What verification is required?","acceptedAnswer":{"@type":"Answer","text":"SAPOTR completes the required identity, work-eligibility and other applicable checks before you become available for bookings."}},
+  {"@type":"Question","name":"Is SAPOTR a Job Board or Recruitment Agency?","acceptedAnswer":{"@type":"Answer","text":"No. SAPOTR is a technology platform, not a job board or agency. No job searching, applications, interview waiting or follow-ups. Receive work opportunities directly in the app, then Accept. Work. Earn. Repeat."}},
+  {"@type":"Question","name":"How much will I earn per hour?","acceptedAnswer":{"@type":"Answer","text":"SAPOTR uses a predefined flat hourly rate shown in the platform. The rate is fixed and is not negotiated for each booking."}},
+  {"@type":"Question","name":"Is there any fee to join SAPOTR?","acceptedAnswer":{"@type":"Answer","text":"No. There is no fee to join SAPOTR."}}]
 }
 </script>
 
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org","@type":"LocalBusiness",
+  "@context":"https://schema.org","@type":"Organization",
   "name":"SAPOTR Pvt Ltd","alternateName":"SAPOTR",
-  "description":"On-demand workforce platform connecting New Zealand businesses with verified employees for short-term, one-day and same-day work.",
+  "description":"NZ’s Last-Minute Staff Support Platform.",
   "url":"https://www.sapotr.co.nz","logo":"https://www.sapotr.co.nz/assets/logo-mark.png",
-  "image":"https://www.sapotr.co.nz/assets/og-image.jpg",
+  "image":"https://www.sapotr.co.nz/assets/og-sapotr.jpg",
   "email":"admin@sapotr.co.nz","telephone":"+64212387544",
   "address":{"@type":"PostalAddress","streetAddress":"3 Kairakau Street","addressLocality":"Takanini","addressRegion":"Auckland","postalCode":"2110","addressCountry":"NZ"},
-  "areaServed":{"@type":"Country","name":"New Zealand"},
-  "knowsAbout":["on-demand staffing","short-term staff","one-day work","extra staff for retail","hospitality staffing"]
+  "areaServed":{"@type":"Country","name":"New Zealand"}
 }
 </script>
 
