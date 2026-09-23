@@ -32,7 +32,6 @@
 <!-- the ticker's one-typeface-per-trade faces, subset to the letters the category names use -->
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Josefin+Sans:wght@600&family=Oswald:wght@500&family=Pacifico&family=Playfair+Display:ital,wght@1,700&family=Quicksand:wght@600&family=Roboto+Slab:wght@600&family=Saira+Condensed:wght@700&display=swap&text=%20%26ABCDEFGHIJKLMNOPQRSTUVWXYZacdeghilmnoprstuvy" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-<noscript><style>.wt-panel[hidden]{display:block}.wt-panel+.wt-panel{border-top:1px solid #e7e9f1}</style></noscript>
 </head>
 <body>
 
@@ -136,7 +135,7 @@
     <div class="hero-slides" id="hero-slides">
 
       <!-- ───── Banner 1 · Auckland opportunity network ───── -->
-      <article class="hs hs--map is-active" id="hs-1" data-tone="dark" role="tabpanel" aria-roledescription="slide" aria-label="1 of 5">
+      <article class="hs hs--map is-active" id="hs-1" data-tone="dark" role="group" aria-roledescription="slide" aria-label="1 of 5">
         <div class="hs-bg" aria-hidden="true">
           <div class="hmap" id="hmap">
             <!-- A branded, drawn Auckland rather than a map tile: crisp at any
@@ -263,7 +262,7 @@
       </article>
 
       <!-- ───── Banner 2 · the extra support businesses need ───── -->
-      <article class="hs hs--support" id="hs-2" data-tone="light" role="tabpanel" aria-roledescription="slide" aria-label="2 of 5" hidden>
+      <article class="hs hs--support" id="hs-2" data-tone="light" role="group" aria-roledescription="slide" aria-label="2 of 5" hidden>
         <div class="hs-bg" aria-hidden="true">
           <span class="b2-disc"></span><span class="b2-ring"></span><span class="b2-dots"></span>
         </div>
@@ -299,16 +298,16 @@
       </article>
 
       <!-- ───── Banner 3 · the old way vs SAPOTR ───── -->
-      <article class="hs hs--old" id="hs-3" data-tone="dark" role="tabpanel" aria-roledescription="slide" aria-label="3 of 5" hidden>
+      <article class="hs hs--old" id="hs-3" data-tone="dark" role="group" aria-roledescription="slide" aria-label="3 of 5" hidden>
         <div class="hs-bg" aria-hidden="true"><span class="b3-grid"></span><span class="b3-glow"></span></div>
 
         <div class="wrap hs-inner b3-inner">
           <div class="b3-copy">
             <ul class="b3-no" data-seq="1">
-              <li style="--i:0"><span class="b3-ic"><svg class="ic" aria-hidden="true"><use href="#i-nosearch"/></svg></span><s>No Searching Jobs in FB.</s></li>
-              <li style="--i:1"><span class="b3-ic"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span><s>No Applying in Job Boards.</s></li>
-              <li style="--i:2"><span class="b3-ic"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><s>No Waiting for Interview Calls.</s></li>
-              <li style="--i:3"><span class="b3-ic"><svg class="ic" aria-hidden="true"><use href="#i-bell"/></svg></span><s>No Chasing Confirmations.</s></li>
+              <li style="--i:0"><span class="b3-ic"><svg class="ic" aria-hidden="true"><use href="#i-nosearch"/></svg></span><span class="b3-t">No Searching Jobs in FB.</span></li>
+              <li style="--i:1"><span class="b3-ic"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span><span class="b3-t">No Applying in Job Boards.</span></li>
+              <li style="--i:2"><span class="b3-ic"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><span class="b3-t">No Waiting for Interview Calls.</span></li>
+              <li style="--i:3"><span class="b3-ic"><svg class="ic" aria-hidden="true"><use href="#i-bell"/></svg></span><span class="b3-t">No Chasing Confirmations.</span></li>
             </ul>
             <h2 class="hs-title b3-title" data-seq="2">Skip the Old Way of Finding Work. <em>Get Smarter.</em></h2>
             <div class="hs-cta" data-seq="3">
@@ -347,7 +346,7 @@
       </article>
 
       <!-- ───── Banner 4 · who can join ───── -->
-      <article class="hs hs--types" id="hs-4" data-tone="light" role="tabpanel" aria-roledescription="slide" aria-label="4 of 5" hidden>
+      <article class="hs hs--types" id="hs-4" data-tone="light" role="group" aria-roledescription="slide" aria-label="4 of 5" hidden>
         <div class="hs-bg" aria-hidden="true"><span class="b4-sun"></span><span class="b4-arcs"></span></div>
 
         <div class="wrap hs-inner b4-inner">
@@ -360,7 +359,7 @@
         </div>
 
         <div class="b4-art">
-          <img class="b4-group" src="assets/img/sapotr-group.webp" width="1110" height="1300" decoding="async" fetchpriority="low"
+          <img class="b4-group" src="assets/img/banner4-group.webp" width="1072" height="944" decoding="async" fetchpriority="low"
                alt="A crowd of smiling SAPOTRs of many backgrounds, all in navy SAPOTR caps and polos">
             <ul class="b4-types" data-seq="3">
               <li class="wt wt--1" style="--i:0"><span class="wt-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#c-education"/></svg></span>Student</li>
@@ -374,7 +373,7 @@
       </article>
 
       <!-- ───── Banner 5 · the brand statement ───── -->
-      <article class="hs hs--brand" id="hs-5" data-tone="dark" role="tabpanel" aria-roledescription="slide" aria-label="5 of 5" hidden>
+      <article class="hs hs--brand" id="hs-5" data-tone="dark" role="group" aria-roledescription="slide" aria-label="5 of 5" hidden>
         <div class="hs-bg" aria-hidden="true">
           <span class="b5-beam b5-beam--y"></span><span class="b5-beam b5-beam--r"></span><span class="b5-beam b5-beam--c"></span>
         </div>
@@ -385,7 +384,7 @@
             <img class="b5-mark" data-seq="2" src="assets/img/logo-mark-256.webp" alt="" width="256" height="202" aria-hidden="true">
           </div>
           <figure class="b5-photo" data-seq="3">
-            <img src="assets/img/hero-team-1400.webp" srcset="assets/img/hero-team-760.webp 760w, assets/img/hero-team-1400.webp 1318w"
+            <img src="assets/img/hero-team-1400.jpg" srcset="assets/img/hero-team-760.jpg 760w, assets/img/hero-team-1400.jpg 1318w"
                  sizes="(max-width:1300px) 100vw, 1240px" width="1318" height="514" decoding="async" fetchpriority="low"
                  alt="A line of SAPOTRs giving a thumbs up on the Auckland waterfront, the Sky Tower behind them">
             <div class="hs-cta b5-cta">
@@ -397,20 +396,6 @@
 
     </div>
 
-    <!-- carousel controls -->
-    <div class="hero-ui" id="hero-ui">
-      <div class="wrap hero-ui-inner">
-        <p class="hero-count" aria-hidden="true"><b id="hero-now">01</b><span>/</span>05</p>
-        <div class="hero-nav">
-          <button class="hui-btn" id="hero-prev" type="button" aria-label="Previous banner"><svg class="ic" aria-hidden="true"><use href="#i-chev-l"/></svg></button>
-          <div class="hero-dots" id="hero-dots" role="tablist" aria-label="Choose a banner"></div>
-          <button class="hui-btn" id="hero-next" type="button" aria-label="Next banner"><svg class="ic" aria-hidden="true"><use href="#i-chev-r"/></svg></button>
-        </div>
-        <button class="hui-btn hui-toggle" id="hero-toggle" type="button" aria-label="Pause automatic banners" aria-pressed="false">
-          <svg class="ic ic-pause" aria-hidden="true"><use href="#i-pause"/></svg><svg class="ic ic-play" aria-hidden="true"><use href="#i-play"/></svg>
-        </button>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -539,124 +524,199 @@
 
 <!-- ══════════ 3 · Work types ══════════ -->
 <section class="section section--tint" id="work-types">
-  <div class="wrap wt-grid">
-    <div class="wt-side">
-      <h2 class="sec-title wt-title" data-split>More Work Types. <span class="hl">More Opportunities.</span> <span class="hl-red">More Earnings</span></h2>
-
-      <div class="wt-tabs r" data-r role="tablist" aria-label="Work categories" aria-orientation="vertical" id="wt-tabs">
-        <button class="wt-tab" role="tab" id="wt-t1" aria-controls="wt-p1" aria-selected="true" type="button"><span class="wt-n">01</span><svg class="ic" aria-hidden="true"><use href="#c-hosp"/></svg><span class="wt-l">Hospitality</span></button>
-        <button class="wt-tab" role="tab" id="wt-t2" aria-controls="wt-p2" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">02</span><svg class="ic" aria-hidden="true"><use href="#c-retail"/></svg><span class="wt-l">Retail &amp; Shopping</span></button>
-        <button class="wt-tab" role="tab" id="wt-t3" aria-controls="wt-p3" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">03</span><svg class="ic" aria-hidden="true"><use href="#c-events"/></svg><span class="wt-l">Events &amp; Entertainment</span></button>
-        <button class="wt-tab" role="tab" id="wt-t4" aria-controls="wt-p4" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">04</span><svg class="ic" aria-hidden="true"><use href="#c-warehouse"/></svg><span class="wt-l">Warehousing &amp; Logistics</span></button>
-        <button class="wt-tab" role="tab" id="wt-t5" aria-controls="wt-p5" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">05</span><svg class="ic" aria-hidden="true"><use href="#c-delivery"/></svg><span class="wt-l">Delivery &amp; Driving</span></button>
-        <button class="wt-tab" role="tab" id="wt-t6" aria-controls="wt-p6" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">06</span><svg class="ic" aria-hidden="true"><use href="#c-moving"/></svg><span class="wt-l">Moving &amp; Setup</span></button>
-        <button class="wt-tab" role="tab" id="wt-t7" aria-controls="wt-p7" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">07</span><svg class="ic" aria-hidden="true"><use href="#c-cleaning"/></svg><span class="wt-l">Cleaning &amp; Facilities</span></button>
-        <button class="wt-tab" role="tab" id="wt-t8" aria-controls="wt-p8" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">08</span><svg class="ic" aria-hidden="true"><use href="#c-education"/></svg><span class="wt-l">Education &amp; Institutions</span></button>
-        <button class="wt-tab" role="tab" id="wt-t9" aria-controls="wt-p9" aria-selected="false" tabindex="-1" type="button"><span class="wt-n">09</span><svg class="ic" aria-hidden="true"><use href="#c-general"/></svg><span class="wt-l">General Business Support / Any Other Business</span></button>
-      </div>
+  <div class="wrap">
+    <h2 class="sec-title sec-title--center wt-title" data-split>More Work Types. <span class="hl">More Opportunities.</span> <span class="hl-red">More Earnings</span></h2>
+  </div>
+  <div class="wrap">
+    <div class="wc-grid" id="wc-grid">
+      <article class="wc wc--cyan r" data-r>
+        <figure class="wc-media"><img src="assets/img/work-hospitality-760.webp" srcset="assets/img/work-hospitality-760.webp 760w, assets/img/work-hospitality-1400.webp 1400w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1400" height="700" loading="lazy" decoding="async" alt="A SAPOTR serving meals to smiling guests in a busy café"></figure>
+        <div class="wc-body">
+          <div class="wc-head">
+            <span class="wc-ic"><svg class="ic" aria-hidden="true"><use href="#c-hosp"/></svg></span>
+            <span class="wc-n" aria-hidden="true">01</span>
+          </div>
+          <h3 class="wc-name">Hospitality</h3>
+          <ul class="wc-jobs">
+            <li>General Support Worker</li>
+            <li>Kitchen Hand</li>
+            <li>Wait Staff</li>
+            <li>Food Service Assistant</li>
+            <li>Catering Assistant</li>
+            <li>Table / Floor Support</li>
+            <li>Dishwashing / Stewarding</li>
+            <li>Front-of-House Support</li>
+            <li>Event Hospitality Support</li>
+            <li>Parking Management Support</li>
+          </ul>
+        </div>
+      </article>
+      <article class="wc wc--yellow r" data-r>
+        <figure class="wc-media"><img src="assets/img/work-retail-760.webp" srcset="assets/img/work-retail-760.webp 760w, assets/img/work-retail-1400.webp 1400w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1400" height="968" loading="lazy" decoding="async" alt="A SAPOTR shaking hands with a supermarket store manager"></figure>
+        <div class="wc-body">
+          <div class="wc-head">
+            <span class="wc-ic"><svg class="ic" aria-hidden="true"><use href="#c-retail"/></svg></span>
+            <span class="wc-n" aria-hidden="true">02</span>
+          </div>
+          <h3 class="wc-name">Retail &amp; Shopping</h3>
+          <ul class="wc-jobs">
+            <li>General Support Worker</li>
+            <li>Retail Assistant</li>
+            <li>Store Assistant</li>
+            <li>Shelf Filler</li>
+            <li>Stock Assistant</li>
+            <li>Checkout / Cashier Support</li>
+            <li>Click &amp; Collect / Order Support</li>
+            <li>Customer Service Assistant</li>
+            <li>Parking Management Support</li>
+          </ul>
+        </div>
+      </article>
+      <article class="wc wc--red r" data-r>
+        <figure class="wc-media"><img src="assets/img/Eventsentertainment.png" srcset="assets/img/Eventsentertainment.png 760w, assets/img/Eventsentertainment.png 1200w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1200" height="800" loading="lazy" decoding="async" alt="A server pouring wine at a set banquet table before an event"></figure>
+        <div class="wc-body">
+          <div class="wc-head">
+            <span class="wc-ic"><svg class="ic" aria-hidden="true"><use href="#c-events"/></svg></span>
+            <span class="wc-n" aria-hidden="true">03</span>
+          </div>
+          <h3 class="wc-name">Events &amp; Entertainment</h3>
+          <ul class="wc-jobs">
+            <li>General Support Worker</li>
+            <li>Event Assistant</li>
+            <li>Event Setup Assistant</li>
+            <li>Pack-Down Assistant</li>
+            <li>Guest / Venue Support</li>
+            <li>Ticketing Support</li>
+            <li>Registration / Check-In Assistant</li>
+            <li>Promotion Assistant</li>
+            <li>Event Crew</li>
+            <li>Volunteers</li>
+            <li>Parking Management Support</li>
+          </ul>
+        </div>
+      </article>
+      <article class="wc wc--cyan r" data-r>
+        <figure class="wc-media"><img src="assets/img/work-warehouse-760.webp" srcset="assets/img/work-warehouse-760.webp 760w, assets/img/work-warehouse-1400.webp 1400w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1400" height="700" loading="lazy" decoding="async" alt="SAPOTRs packing and taping boxes on a warehouse conveyor"></figure>
+        <div class="wc-body">
+          <div class="wc-head">
+            <span class="wc-ic"><svg class="ic" aria-hidden="true"><use href="#c-warehouse"/></svg></span>
+            <span class="wc-n" aria-hidden="true">04</span>
+          </div>
+          <h3 class="wc-name">Warehousing &amp; Logistics</h3>
+          <ul class="wc-jobs">
+            <li>General Support Worker</li>
+            <li>Warehouse Assistant</li>
+            <li>Picker / Packer</li>
+            <li>Packing Assistant</li>
+            <li>Loading &amp; Unloading Assistant</li>
+            <li>Stock Handler</li>
+            <li>Dispatch Assistant</li>
+            <li>Warehouse Support</li>
+            <li>Inventory / Stock Support</li>
+          </ul>
+        </div>
+      </article>
+      <article class="wc wc--yellow r" data-r>
+        <figure class="wc-media"><img src="assets/img/work-delivery-760.webp" srcset="assets/img/work-delivery-760.webp 760w, assets/img/work-delivery-1400.webp 1400w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1400" height="933" loading="lazy" decoding="async" alt="A SAPOTR at the wheel giving a thumbs up, a navigation app on the dashboard phone"></figure>
+        <div class="wc-body">
+          <div class="wc-head">
+            <span class="wc-ic"><svg class="ic" aria-hidden="true"><use href="#c-delivery"/></svg></span>
+            <span class="wc-n" aria-hidden="true">05</span>
+          </div>
+          <h3 class="wc-name">Delivery &amp; Driving</h3>
+          <p class="wc-flag"><svg class="ic" aria-hidden="true"><use href="#i-id"/></svg>Need Valid License</p>
+          <ul class="wc-jobs">
+            <li>Delivery Driver</li>
+            <li>Courier Driver</li>
+            <li>Delivery Assistant</li>
+            <li>Driver Assistant</li>
+            <li>Parcel Sorting Assistant</li>
+            <li>Loading &amp; Unloading Assistant</li>
+            <li>Last-Mile Support</li>
+            <li>General Support Worker</li>
+          </ul>
+        </div>
+      </article>
+      <article class="wc wc--red r" data-r>
+        <figure class="wc-media"><img src="assets/img/Delivery and Courier industry.jpg" srcset="assets/img/Delivery and Courier industry.jpg 760w, assets/img/Delivery and Courier industry.jpg 1200w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1200" height="800" loading="lazy" decoding="async" alt="Two movers carrying boxes through a bright empty room"></figure>
+        <div class="wc-body">
+          <div class="wc-head">
+            <span class="wc-ic"><svg class="ic" aria-hidden="true"><use href="#c-moving"/></svg></span>
+            <span class="wc-n" aria-hidden="true">06</span>
+          </div>
+          <h3 class="wc-name">Moving &amp; Setup</h3>
+          <ul class="wc-jobs">
+            <li>General Moving Support</li>
+            <li>Moving Assistant</li>
+            <li>Loading Assistant</li>
+            <li>Unloading Assistant</li>
+            <li>Furniture / Goods Handling Assistant</li>
+            <li>Setup Assistant</li>
+            <li>Pack-Down Assistant</li>
+          </ul>
+        </div>
+      </article>
+      <article class="wc wc--cyan r" data-r>
+        <figure class="wc-media"><img src="assets/img/Cleaningfacilities.png" srcset="assets/img/Cleaningfacilities.png 760w, assets/img/work-cleaning-760.webp 1200w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1200" height="800" loading="lazy" decoding="async" alt="A facilities worker cleaning high glass in a bright building"></figure>
+        <div class="wc-body">
+          <div class="wc-head">
+            <span class="wc-ic"><svg class="ic" aria-hidden="true"><use href="#c-cleaning"/></svg></span>
+            <span class="wc-n" aria-hidden="true">07</span>
+          </div>
+          <h3 class="wc-name">Cleaning &amp; Facilities</h3>
+          <ul class="wc-jobs">
+            <li>General Maintenance Support</li>
+            <li>Cleaner</li>
+            <li>Cleaning Assistant</li>
+            <li>Property Cleaning Assistant</li>
+            <li>Facility Support Assistant</li>
+            <li>Event Cleanup Assistant</li>
+            <li>Housekeeping Assistant</li>
+          </ul>
+        </div>
+      </article>
+      <article class="wc wc--yellow r" data-r>
+        <figure class="wc-media"><img src="assets/img/work-education-760.webp" srcset="assets/img/work-education-760.webp 760w, assets/img/work-education-1400.webp 1400w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1400" height="933" loading="lazy" decoding="async" alt="A SAPOTR handing out brochures at a school community event check-in table"></figure>
+        <div class="wc-body">
+          <div class="wc-head">
+            <span class="wc-ic"><svg class="ic" aria-hidden="true"><use href="#c-education"/></svg></span>
+            <span class="wc-n" aria-hidden="true">08</span>
+          </div>
+          <h3 class="wc-name">Education &amp; Institutions</h3>
+          <ul class="wc-jobs">
+            <li>General Support Assistant</li>
+            <li>Event Assistant</li>
+            <li>Setup / Pack-Down Assistant</li>
+            <li>Facility Support</li>
+            <li>Grounds Support</li>
+            <li>Kitchen / Canteen Assistant</li>
+          </ul>
+        </div>
+      </article>
+      <article class="wc wc--red r" data-r>
+        <figure class="wc-media"><img src="assets/img/work-general-760.webp" srcset="assets/img/work-general-760.webp 760w, assets/img/work-general-1400.webp 1400w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1400" height="948" loading="lazy" decoding="async" alt="A SAPOTR shaking hands with a business manager on arrival"></figure>
+        <div class="wc-body">
+          <div class="wc-head">
+            <span class="wc-ic"><svg class="ic" aria-hidden="true"><use href="#c-general"/></svg></span>
+            <span class="wc-n" aria-hidden="true">09</span>
+          </div>
+          <h3 class="wc-name">General Business Support / Any Other Business</h3>
+          <ul class="wc-jobs">
+            <li>General Support Worker</li>
+            <li>General Assistant</li>
+            <li>Office Support Assistant</li>
+            <li>Admin Support</li>
+            <li>Packing Assistant</li>
+            <li>Stock Support</li>
+            <li>Customer Service Support</li>
+            <li>Event Support</li>
+            <li>General Labour / Helper</li>
+            <li>Volunteer</li>
+          </ul>
+        </div>
+      </article>
     </div>
-
-    <div class="wt-panels r" data-r id="wt-panels">
-      <div class="wt-panel" id="wt-p1" role="tabpanel" aria-labelledby="wt-t1" tabindex="0">
-        <figure class="wt-media"><img src="assets/img/work-hospitality-760.webp" srcset="assets/img/work-hospitality-760.webp 760w, assets/img/work-hospitality-1400.webp 1400w" sizes="(max-width:1000px) 100vw, 720px" width="1400" height="700" loading="lazy" decoding="async" alt="A SAPOTR serving meals to smiling guests in a busy café"></figure>
-        <div class="wt-body">
-          <h3 class="wt-name"><span class="wt-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#c-hosp"/></svg></span>Hospitality</h3>
-          <ul class="wt-jobs">
-            <li>General Support Worker</li><li>Kitchen Hand</li><li>Wait Staff</li><li>Food Service Assistant</li><li>Catering Assistant</li>
-            <li>Table / Floor Support</li><li>Dishwashing / Stewarding</li><li>Front-of-House Support</li><li>Event Hospitality Support</li><li>Parking Management Support</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="wt-panel" id="wt-p2" role="tabpanel" aria-labelledby="wt-t2" tabindex="0" hidden>
-        <figure class="wt-media"><img src="assets/img/work-retail-760.webp" srcset="assets/img/work-retail-760.webp 760w, assets/img/work-retail-1400.webp 1400w" sizes="(max-width:1000px) 100vw, 720px" width="1400" height="968" loading="lazy" decoding="async" alt="A SAPOTR shaking hands with a supermarket store manager"></figure>
-        <div class="wt-body">
-          <h3 class="wt-name"><span class="wt-ic ic-yellow"><svg class="ic" aria-hidden="true"><use href="#c-retail"/></svg></span>Retail &amp; Shopping</h3>
-          <ul class="wt-jobs">
-            <li>General Support Worker</li><li>Retail Assistant</li><li>Store Assistant</li><li>Shelf Filler</li><li>Stock Assistant</li>
-            <li>Checkout / Cashier Support</li><li>Click &amp; Collect / Order Support</li><li>Customer Service Assistant</li><li>Parking Management Support</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="wt-panel" id="wt-p3" role="tabpanel" aria-labelledby="wt-t3" tabindex="0" hidden>
-        <figure class="wt-media"><img src="assets/img/work-events-760.webp" srcset="assets/img/work-events-760.webp 760w, assets/img/work-events-1200.webp 1200w" sizes="(max-width:1000px) 100vw, 720px" width="1200" height="800" loading="lazy" decoding="async" alt="A server pouring wine at a set banquet table before an event"></figure>
-        <div class="wt-body">
-          <h3 class="wt-name"><span class="wt-ic ic-red"><svg class="ic" aria-hidden="true"><use href="#c-events"/></svg></span>Events &amp; Entertainment</h3>
-          <ul class="wt-jobs">
-            <li>General Support Worker</li><li>Event Assistant</li><li>Event Setup Assistant</li><li>Pack-Down Assistant</li><li>Guest / Venue Support</li><li>Ticketing Support</li>
-            <li>Registration / Check-In Assistant</li><li>Promotion Assistant</li><li>Event Crew</li><li>Volunteers</li><li>Parking Management Support</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="wt-panel" id="wt-p4" role="tabpanel" aria-labelledby="wt-t4" tabindex="0" hidden>
-        <figure class="wt-media"><img src="assets/img/work-warehouse-760.webp" srcset="assets/img/work-warehouse-760.webp 760w, assets/img/work-warehouse-1400.webp 1400w" sizes="(max-width:1000px) 100vw, 720px" width="1400" height="700" loading="lazy" decoding="async" alt="SAPOTRs packing and taping boxes on a warehouse conveyor"></figure>
-        <div class="wt-body">
-          <h3 class="wt-name"><span class="wt-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#c-warehouse"/></svg></span>Warehousing &amp; Logistics</h3>
-          <ul class="wt-jobs">
-            <li>General Support Worker</li><li>Warehouse Assistant</li><li>Picker / Packer</li><li>Packing Assistant</li><li>Loading &amp; Unloading Assistant</li>
-            <li>Stock Handler</li><li>Dispatch Assistant</li><li>Warehouse Support</li><li>Inventory / Stock Support</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="wt-panel" id="wt-p5" role="tabpanel" aria-labelledby="wt-t5" tabindex="0" hidden>
-        <figure class="wt-media"><img src="assets/img/work-delivery-760.webp" srcset="assets/img/work-delivery-760.webp 760w, assets/img/work-delivery-1400.webp 1400w" sizes="(max-width:1000px) 100vw, 720px" width="1400" height="933" loading="lazy" decoding="async" alt="A SAPOTR at the wheel giving a thumbs up, a navigation app on the dashboard phone"></figure>
-        <div class="wt-body">
-          <h3 class="wt-name"><span class="wt-ic ic-yellow"><svg class="ic" aria-hidden="true"><use href="#c-delivery"/></svg></span>Delivery &amp; Driving</h3>
-          <p class="wt-flag"><svg class="ic" aria-hidden="true"><use href="#i-id"/></svg>Need Valid License</p>
-          <ul class="wt-jobs">
-            <li>Delivery Driver</li><li>Courier Driver</li><li>Delivery Assistant</li><li>Driver Assistant</li>
-            <li>Parcel Sorting Assistant</li><li>Loading &amp; Unloading Assistant</li><li>Last-Mile Support</li><li>General Support Worker</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="wt-panel" id="wt-p6" role="tabpanel" aria-labelledby="wt-t6" tabindex="0" hidden>
-        <figure class="wt-media"><img src="assets/img/work-moving-760.webp" srcset="assets/img/work-moving-760.webp 760w, assets/img/work-moving-1200.webp 1200w" sizes="(max-width:1000px) 100vw, 720px" width="1200" height="800" loading="lazy" decoding="async" alt="Two movers carrying boxes through a bright empty room"></figure>
-        <div class="wt-body">
-          <h3 class="wt-name"><span class="wt-ic ic-red"><svg class="ic" aria-hidden="true"><use href="#c-moving"/></svg></span>Moving &amp; Setup</h3>
-          <ul class="wt-jobs">
-            <li>General Moving Support</li><li>Moving Assistant</li><li>Loading Assistant</li><li>Unloading Assistant</li>
-            <li>Furniture / Goods Handling Assistant</li><li>Setup Assistant</li><li>Pack-Down Assistant</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="wt-panel" id="wt-p7" role="tabpanel" aria-labelledby="wt-t7" tabindex="0" hidden>
-        <figure class="wt-media"><img src="assets/img/work-cleaning-760.webp" srcset="assets/img/work-cleaning-760.webp 760w, assets/img/work-cleaning-1200.webp 1200w" sizes="(max-width:1000px) 100vw, 720px" width="1200" height="800" loading="lazy" decoding="async" alt="A facilities worker cleaning high glass in a bright building"></figure>
-        <div class="wt-body">
-          <h3 class="wt-name"><span class="wt-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#c-cleaning"/></svg></span>Cleaning &amp; Facilities</h3>
-          <ul class="wt-jobs">
-            <li>General Maintenance Support</li><li>Cleaner</li><li>Cleaning Assistant</li><li>Property Cleaning Assistant</li>
-            <li>Facility Support Assistant</li><li>Event Cleanup Assistant</li><li>Housekeeping Assistant</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="wt-panel" id="wt-p8" role="tabpanel" aria-labelledby="wt-t8" tabindex="0" hidden>
-        <figure class="wt-media"><img src="assets/img/work-education-760.webp" srcset="assets/img/work-education-760.webp 760w, assets/img/work-education-1400.webp 1400w" sizes="(max-width:1000px) 100vw, 720px" width="1400" height="933" loading="lazy" decoding="async" alt="A SAPOTR handing out brochures at a school community event check-in table"></figure>
-        <div class="wt-body">
-          <h3 class="wt-name"><span class="wt-ic ic-yellow"><svg class="ic" aria-hidden="true"><use href="#c-education"/></svg></span>Education &amp; Institutions</h3>
-          <ul class="wt-jobs">
-            <li>General Support Assistant</li><li>Event Assistant</li><li>Setup / Pack-Down Assistant</li>
-            <li>Facility Support</li><li>Grounds Support</li><li>Kitchen / Canteen Assistant</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="wt-panel" id="wt-p9" role="tabpanel" aria-labelledby="wt-t9" tabindex="0" hidden>
-        <figure class="wt-media"><img src="assets/img/work-general-760.webp" srcset="assets/img/work-general-760.webp 760w, assets/img/work-general-1400.webp 1400w" sizes="(max-width:1000px) 100vw, 720px" width="1400" height="948" loading="lazy" decoding="async" alt="A SAPOTR shaking hands with a business manager on arrival"></figure>
-        <div class="wt-body">
-          <h3 class="wt-name"><span class="wt-ic ic-red"><svg class="ic" aria-hidden="true"><use href="#c-general"/></svg></span>General Business Support / Any Other Business</h3>
-          <ul class="wt-jobs">
-            <li>General Support Worker</li><li>General Assistant</li><li>Office Support Assistant</li><li>Admin Support</li><li>Packing Assistant</li>
-            <li>Stock Support</li><li>Customer Service Support</li><li>Event Support</li><li>General Labour / Helper</li><li>Volunteer</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <div class="dots" id="wc-dots" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -903,7 +963,7 @@
 <!-- ══════════ 9 · Final CTA ══════════ -->
 <section class="cta" id="join">
   <div class="cta-media" aria-hidden="true">
-    <img src="assets/img/cta-team-1400.webp" srcset="assets/img/cta-team-760.webp 760w, assets/img/cta-team-1400.webp 1342w"
+    <img src="assets/img/cta-team-1400.jpg" srcset="assets/img/cta-team-760.jpg 760w, assets/img/cta-team-1400.jpg 1342w"
          sizes="100vw" width="1342" height="570" alt="" loading="lazy" decoding="async">
     <span class="cta-scrim"></span>
     <svg class="cta-swoosh" viewBox="0 0 600 400" preserveAspectRatio="none">

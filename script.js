@@ -1,8 +1,8 @@
 /* ═══════════════════════════════════════════════════════════
    SAPOTR — landing page behaviour (vanilla JS, no libraries)
     1 Helpers            7 Count-up numbers
-    2 Header + nav       8 Work types tabs
-    3 Reveals + split    9 Swipe dots (safety deck)
+    2 Header + nav       8 Work types (CSS)
+    3 Reveals + split    9 Swipe dots (mobile decks)
     4 Scroll FX         10 FAQ accordion
     5 Hero carousel     11 Journey + section cues
     6 Hero map          12 Tilt + spotlight + magnet
@@ -186,44 +186,31 @@
      showing) and `leaving` (the one fading out, or -1) — and paint()
      derives every class from them, so nothing can accumulate.
      Navigation during a cross-fade is coalesced into one pending
-     request. Every reason to wait (focus, drag, a hover on the
-     controls, off screen, hidden tab, the pause button) is tracked
-     separately, and the dwell resumes from where it stopped. */
+     request. There are no visible controls: banners move by
+     themselves and by swipe, drag, trackpad or arrow keys. Every
+     reason to wait (focus, drag, hovering a button, off screen,
+     hidden tab) is tracked separately, and the dwell resumes from
+     where it stopped. */
   var hero = (function () {
     var stage = $('#hero-stage');
     var wrap = $('#hero-slides');
-    var dotsBox = $('#hero-dots');
-    if (!stage || !wrap || !dotsBox) return null;
+    if (!stage || !wrap) return null;
 
     var slides = $$('.hs', wrap);
     var DWELL = [7600, 6200, 7400, 6600, 6200];  /* the storytelling banners hold a touch longer */
     var MANUAL_DWELL = 11000;                     /* after a manual move, give the reader time */
     var XFADE = 950;                              /* keep in step with .hs transitions */
-    var SWIPE_MIN = 44, SWIPE_LOCK = 10;
+    var SWIPE_MIN = 40;     /* px of sideways travel that counts as a swipe */
+    var SWIPE_LOCK = 8;     /* px before deciding whether it is a swipe or a scroll */
+    var FLICK = 0.35;       /* px/ms: a quick short flick also counts */
 
     var index = 0, leaving = -1, busy = false, queued = null;
     var timer = null, fadeTimer = null, startedAt = 0, remaining = DWELL[0];
-    var holds = { focus: false, drag: false, hover: false, off: false, hidden: false, user: false };
-    var dots = [];
-    var now = $('#hero-now');
-    var toggle = $('#hero-toggle');
+    var holds = { focus: false, drag: false, hover: false, off: false, hidden: false };
     var listeners = [];
 
-    slides.forEach(function (s, i) {
-      s.removeAttribute('hidden');
-      var b = document.createElement('button');
-      b.type = 'button';
-      b.className = 'hdot';
-      b.setAttribute('role', 'tab');
-      b.setAttribute('aria-controls', s.id);
-      b.setAttribute('aria-label', 'Banner ' + (i + 1) + ' of ' + slides.length);
-      b.innerHTML = '<i></i>';
-      b.addEventListener('click', function () { go(i, true); });
-      dotsBox.appendChild(b);
-      dots.push(b);
-    });
+    slides.forEach(function (s) { s.removeAttribute('hidden'); });
 
-    function pad(n) { return (n < 10 ? '0' : '') + n; }
     function paused() { for (var k in holds) { if (holds[k]) return true; } return false; }
 
     function paint() {
@@ -234,19 +221,14 @@
         s.setAttribute('aria-hidden', on ? 'false' : 'true');
         if ('inert' in s) s.inert = !on;           /* nothing focusable in a banner you cannot see */
       });
-      dots.forEach(function (d, i) {
-        d.setAttribute('aria-selected', i === index ? 'true' : 'false');
-        d.tabIndex = i === index ? 0 : -1;
-      });
       var tone = slides[index].dataset.tone || 'dark';
       heroEl.dataset.tone = tone;
       header.dataset.tone = tone;
-      if (now) now.textContent = pad(index + 1);
       listeners.forEach(function (f) { f(index, slides[index]); });
     }
 
     function syncClasses() {
-      heroEl.classList.toggle('is-auto', !reduced && !holds.user);
+      heroEl.classList.toggle('is-auto', !reduced);
       heroEl.classList.toggle('is-paused', paused() || busy);
     }
 
@@ -300,28 +282,12 @@
       fadeTimer = setTimeout(endFade, reduced ? 20 : XFADE);
     }
 
-    $('#hero-prev').addEventListener('click', function () { go(index - 1, true); });
-    $('#hero-next').addEventListener('click', function () { go(index + 1, true); });
-
-    /* the pause button: required for anything that moves by itself */
-    if (reduced) {
-      toggle.hidden = true;
-    } else {
-      toggle.addEventListener('click', function () {
-        var on = toggle.getAttribute('aria-pressed') !== 'true';
-        toggle.setAttribute('aria-pressed', String(on));
-        toggle.setAttribute('aria-label', on ? 'Play automatic banners' : 'Pause automatic banners');
-        if (!on) remaining = Math.max(remaining, 2500);
-        hold('user', on);
-      });
-    }
-
     /* keyboard focus inside the banner holds it, so nobody is moved on mid-sentence */
     stage.addEventListener('focusin', function (e) { if (e.target.matches(':focus-visible')) hold('focus', true); });
     stage.addEventListener('focusout', function () { hold('focus', false); });
-    /* hovering the controls or a button means a click is coming */
+    /* hovering a button means a click is coming */
     if (fine) {
-      $$('.hero-ui-inner, .hs-cta', stage).forEach(function (el) {
+      $$('.hs-cta', stage).forEach(function (el) {
         el.addEventListener('mouseenter', function () { hold('hover', true); });
         el.addEventListener('mouseleave', function () { hold('hover', false); });
       });
@@ -340,51 +306,82 @@
       else if (k === 'Home') go(0, true);
       else if (k === 'End') go(slides.length - 1, true);
       else return;
-      if (e.target.closest('.hero-dots')) { e.preventDefault(); setTimeout(function () { dots[index].focus(); }, 0); }
+      e.preventDefault();
     });
 
-    /* ---- gestures: the banner tracks the finger (or mouse) with resistance ---- */
+    /* ---- gestures ----
+       One code path for touch, pen and mouse. The first few pixels decide
+       the gesture: mostly sideways means a banner swipe, mostly vertical
+       means it belongs to the page and we let go at once, so scrolling
+       over the hero is never blocked (touch-action: pan-y does the rest).
+       A swipe is accepted at any moment, even mid cross-fade (go() queues
+       it), and it resets the autoplay clock. */
     (function gestures() {
-      var down = false, decided = false, mine = false, x0 = 0, y0 = 0, dx = 0, pid = null, moved = false;
-      function begin(e) {
-        if (busy || (e.pointerType === 'mouse' && e.button !== 0)) return;
-        if (e.target.closest('.hero-ui')) return;
+      var down = false, decided = false, mine = false, moved = false;
+      var x0 = 0, y0 = 0, dx = 0, t0 = 0, pid = null;
+
+      function begin(x, y, id) {
         down = true; decided = false; mine = false; moved = false;
-        x0 = e.clientX; y0 = e.clientY; dx = 0; pid = e.pointerId;
+        x0 = x; y0 = y; dx = 0; t0 = Date.now(); pid = id;
       }
-      function move(e) {
-        if (!down || e.pointerId !== pid) return;
-        dx = e.clientX - x0;
-        var dy = e.clientY - y0;
+      /* true once the gesture is ours, so the caller may stop the page scrolling */
+      function track(x, y) {
+        if (!down) return false;
+        dx = x - x0;
+        var dy = y - y0;
         if (!decided) {
-          if (Math.abs(dx) < SWIPE_LOCK && Math.abs(dy) < SWIPE_LOCK) return;
+          if (Math.abs(dx) < SWIPE_LOCK && Math.abs(dy) < SWIPE_LOCK) return false;
           decided = true;
-          mine = Math.abs(dx) > Math.abs(dy) * 1.2;
-          if (!mine) { down = false; return; }            /* the page wanted it: let it scroll */
+          mine = Math.abs(dx) > Math.abs(dy);
+          if (!mine) { down = false; return false; }      /* a vertical scroll: hands off */
           stage.classList.add('is-dragging');
           hold('drag', true);
-          try { stage.setPointerCapture(pid); } catch (err) { /* fine without */ }
         }
-        if (!mine) return;
         moved = true;
         slides[index].style.setProperty('--hdx', (dx * 0.34).toFixed(1) + 'px');
+        return true;
       }
-      function end() {
+      function finish(x) {
         if (!down) return;
         down = false;
+        if (typeof x === 'number') dx = x - x0;
         slides[index].style.removeProperty('--hdx');
         stage.classList.remove('is-dragging');
-        if (mine) {
-          hold('drag', false);
-          if (Math.abs(dx) > SWIPE_MIN) go(index + (dx < 0 ? 1 : -1), true);
-        }
+        if (!mine) return;
         mine = false;
+        hold('drag', false);
+        var speed = Math.abs(dx) / Math.max(1, Date.now() - t0);
+        if (Math.abs(dx) > SWIPE_MIN || (Math.abs(dx) > 20 && speed > FLICK)) {
+          go(index + (dx < 0 ? 1 : -1), true);           /* left: next, right: previous */
+        }
       }
-      stage.addEventListener('pointerdown', begin);
-      stage.addEventListener('pointermove', move);
-      stage.addEventListener('pointerup', end);
-      stage.addEventListener('pointercancel', end);
-      stage.addEventListener('lostpointercapture', end);
+
+      if (window.PointerEvent) {
+        stage.addEventListener('pointerdown', function (e) {
+          if (e.pointerType === 'mouse' && e.button !== 0) return;
+          begin(e.clientX, e.clientY, e.pointerId);
+        });
+        stage.addEventListener('pointermove', function (e) {
+          if (e.pointerId !== pid) return;
+          var was = mine;
+          if (track(e.clientX, e.clientY) && !was && e.pointerType === 'mouse') {
+            try { stage.setPointerCapture(pid); } catch (err) { /* fine without */ }
+          }
+        });
+        stage.addEventListener('pointerup', function (e) { if (e.pointerId === pid) finish(e.clientX); });
+        stage.addEventListener('pointercancel', function (e) { if (e.pointerId === pid) finish(); });
+      } else {
+        /* older mobile browsers without Pointer Events */
+        stage.addEventListener('touchstart', function (e) {
+          var t = e.changedTouches[0]; begin(t.clientX, t.clientY, t.identifier);
+        }, { passive: true });
+        stage.addEventListener('touchmove', function (e) {
+          var t = e.changedTouches[0];
+          if (track(t.clientX, t.clientY) && e.cancelable) e.preventDefault();
+        }, { passive: false });
+        stage.addEventListener('touchend', function (e) { finish(e.changedTouches[0].clientX); });
+        stage.addEventListener('touchcancel', function () { finish(); });
+      }
       /* a drag must not also count as a click on whatever it started over */
       stage.addEventListener('click', function (e) { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
       stage.addEventListener('dragstart', function (e) { e.preventDefault(); });
@@ -548,7 +545,7 @@
       var copy = relRect($('.hs-copy', slide));
       var cta = relRect($('.hs-cta .btn', slide));
       var headH = header.offsetHeight + 24;
-      var uiH = ($('.hero-ui') || {}).offsetHeight || 70;
+      var uiH = 16;   /* no controls bar any more, just breathing room at the foot */
       var pad = 24;   /* .hmap bleeds 24px past the slide on every side */
       var safe = side
         ? { l: Math.max(copy.r, cta.r) + 32, t: headH + pad, r: W - pad - 20, b: H - pad - uiH - 8 }
@@ -636,62 +633,12 @@
     }, { threshold: 0.6 });
   });
 
-  /* ───── 8 · Work types — an ARIA tab list ───── */
-  (function workTypes() {
-    var list = $('#wt-tabs');
-    if (!list) return;
-    var tabs = $$('.wt-tab', list);
-    var panels = tabs.map(function (t) { return document.getElementById(t.getAttribute('aria-controls')); });
-    var rowMq = window.matchMedia('(max-width: 1000px)');
-    var at = 0;
+  /* ───── 8 · Work types: cards reveal on scroll; on phones they become
+     a swipeable deck with dots (section 9) ───── */
 
-    function orient() { list.setAttribute('aria-orientation', rowMq.matches ? 'horizontal' : 'vertical'); }
-    orient();
-    if (rowMq.addEventListener) rowMq.addEventListener('change', orient);
-
-    function select(i, focus) {
-      at = (i + tabs.length) % tabs.length;
-      tabs.forEach(function (t, k) {
-        var on = k === at;
-        t.setAttribute('aria-selected', String(on));
-        t.tabIndex = on ? 0 : -1;
-        panels[k].hidden = !on;
-      });
-      var p = panels[at];
-      $$('.wt-jobs li', p).forEach(function (li, n) { li.style.setProperty('--n', n); });
-      p.classList.remove('is-in');
-      void p.offsetWidth;                                   /* restart the entrance */
-      p.classList.add('is-in');
-      if (focus) tabs[at].focus({ preventScroll: true });
-      /* on the phone rail, bring the chosen chip into view without moving the page */
-      if (rowMq.matches) {
-        var t = tabs[at];
-        list.scrollTo({ left: t.offsetLeft - (list.clientWidth - t.offsetWidth) / 2, behavior: reduced ? 'auto' : 'smooth' });
-      }
-    }
-
-    tabs.forEach(function (t, i) {
-      t.addEventListener('click', function () { select(i, false); });
-      t.addEventListener('keydown', function (e) {
-        var k = e.key;
-        if (k === 'ArrowDown' || k === 'ArrowRight') select(at + 1, true);
-        else if (k === 'ArrowUp' || k === 'ArrowLeft') select(at - 1, true);
-        else if (k === 'Home') select(0, true);
-        else if (k === 'End') select(tabs.length - 1, true);
-        else return;
-        e.preventDefault();
-      });
-    });
-
-    /* fetch every category photo once the section is near, so a tap never waits */
-    once($('#work-types'), function () {
-      $$('.wt-media img').forEach(function (img) { img.loading = 'eager'; });
-    }, { rootMargin: '600px 0px' });
-  })();
-
-  /* ───── 9 · Swipe dots for the mobile safety deck ───── */
+  /* ───── 9 · Swipe dots for the mobile decks (work types, safety) ───── */
   (function swipeDots() {
-    [['#safe-grid', '#safe-dots', '.safe']].forEach(function (set) {
+    [['#wc-grid', '#wc-dots', '.wc'], ['#safe-grid', '#safe-dots', '.safe']].forEach(function (set) {
       var box = $(set[0]), holder = $(set[1]);
       if (!box || !holder) return;
       var items = $$(set[2], box);
