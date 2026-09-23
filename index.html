@@ -277,7 +277,7 @@
         </div>
 
         <div class="b2-art">
-          <img class="b2-person" src="assets/img/sapotr-walk.webp" width="693" height="1100" decoding="async" fetchpriority="low"
+          <img class="b2-person" draggable="false" src="assets/img/sapotr-walk.webp" width="693" height="1100" decoding="async" fetchpriority="low"
                alt="A smiling SAPOTR in a navy SAPOTR cap and polo, carrying a work bag and giving a thumbs up">
           <div class="ocard ocard--a" aria-hidden="true">
             <span class="ocard-ic ic-cyan"><svg class="ic"><use href="#c-hosp"/></svg></span>
@@ -359,7 +359,7 @@
         </div>
 
         <div class="b4-art">
-          <img class="b4-group" src="assets/img/banner4-group.webp" width="1072" height="944" decoding="async" fetchpriority="low"
+          <img class="b4-group" draggable="false" src="assets/img/banner4-group.webp" width="1072" height="944" decoding="async" fetchpriority="low"
                alt="A crowd of smiling SAPOTRs of many backgrounds, all in navy SAPOTR caps and polos">
             <ul class="b4-types" data-seq="3">
               <li class="wt wt--1" style="--i:0"><span class="wt-ic ic-cyan"><svg class="ic" aria-hidden="true"><use href="#c-education"/></svg></span>Student</li>
@@ -384,7 +384,7 @@
             <img class="b5-mark" data-seq="2" src="assets/img/logo-mark-256.webp" alt="" width="256" height="202" aria-hidden="true">
           </div>
           <figure class="b5-photo" data-seq="3">
-            <img src="assets/img/hero-team-1400.jpg" srcset="assets/img/hero-team-760.jpg 760w, assets/img/hero-team-1400.jpg 1318w"
+            <img src="assets/img/hero-team-1400.jpg" srcset="assets/img/hero-team-1400.jpg 1318w"
                  sizes="(max-width:1300px) 100vw, 1240px" width="1318" height="514" decoding="async" fetchpriority="low"
                  alt="A line of SAPOTRs giving a thumbs up on the Auckland waterfront, the Sky Tower behind them">
             <div class="hs-cta b5-cta">
@@ -525,11 +525,12 @@
 <!-- ══════════ 3 · Work types ══════════ -->
 <section class="section section--tint" id="work-types">
   <div class="wrap">
-    <h2 class="sec-title sec-title--center wt-title" data-split>More Work Types. <span class="hl">More Opportunities.</span> <span class="hl-red">More Earnings</span></h2>
+    <h2 class="sec-title sec-title--center wt-title" data-split><span class="ln">More Work Types.</span> <span class="ln">More Opportunities.</span> <span class="ln">More Earnings !</span></h2>
   </div>
   <div class="wrap">
+    <div class="wc-viewport r" data-r id="wc-viewport" role="group" aria-roledescription="carousel" aria-label="Work types">
     <div class="wc-grid" id="wc-grid">
-      <article class="wc wc--cyan r" data-r>
+      <article class="wc wc--cyan">
         <figure class="wc-media"><img src="assets/img/work-hospitality-760.webp" srcset="assets/img/work-hospitality-760.webp 760w, assets/img/work-hospitality-1400.webp 1400w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1400" height="700" loading="lazy" decoding="async" alt="A SAPOTR serving meals to smiling guests in a busy café"></figure>
         <div class="wc-body">
           <div class="wc-head">
@@ -551,7 +552,7 @@
           </ul>
         </div>
       </article>
-      <article class="wc wc--yellow r" data-r>
+      <article class="wc wc--yellow">
         <figure class="wc-media"><img src="assets/img/work-retail-760.webp" srcset="assets/img/work-retail-760.webp 760w, assets/img/work-retail-1400.webp 1400w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1400" height="968" loading="lazy" decoding="async" alt="A SAPOTR shaking hands with a supermarket store manager"></figure>
         <div class="wc-body">
           <div class="wc-head">
@@ -572,8 +573,8 @@
           </ul>
         </div>
       </article>
-      <article class="wc wc--red r" data-r>
-        <figure class="wc-media"><img src="assets/img/Eventsentertainment.png" srcset="assets/img/Eventsentertainment.png 760w, assets/img/Eventsentertainment.png 1200w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1200" height="800" loading="lazy" decoding="async" alt="A server pouring wine at a set banquet table before an event"></figure>
+      <article class="wc wc--red">
+        <figure class="wc-media"><img src="assets/img/Eventsentertainment.png" srcset="assets/img/Eventsentertainment.png 1200w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1200" height="800" loading="lazy" decoding="async" alt="A server pouring wine at a set banquet table before an event"></figure>
         <div class="wc-body">
           <div class="wc-head">
             <span class="wc-ic"><svg class="ic" aria-hidden="true"><use href="#c-events"/></svg></span>
@@ -595,7 +596,7 @@
           </ul>
         </div>
       </article>
-      <article class="wc wc--cyan r" data-r>
+      <article class="wc wc--cyan">
         <figure class="wc-media"><img src="assets/img/work-warehouse-760.webp" srcset="assets/img/work-warehouse-760.webp 760w, assets/img/work-warehouse-1400.webp 1400w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1400" height="700" loading="lazy" decoding="async" alt="SAPOTRs packing and taping boxes on a warehouse conveyor"></figure>
         <div class="wc-body">
           <div class="wc-head">
@@ -616,7 +617,7 @@
           </ul>
         </div>
       </article>
-      <article class="wc wc--yellow r" data-r>
+      <article class="wc wc--yellow">
         <figure class="wc-media"><img src="assets/img/work-delivery-760.webp" srcset="assets/img/work-delivery-760.webp 760w, assets/img/work-delivery-1400.webp 1400w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1400" height="933" loading="lazy" decoding="async" alt="A SAPOTR at the wheel giving a thumbs up, a navigation app on the dashboard phone"></figure>
         <div class="wc-body">
           <div class="wc-head">
@@ -637,8 +638,8 @@
           </ul>
         </div>
       </article>
-      <article class="wc wc--red r" data-r>
-        <figure class="wc-media"><img src="assets/img/Delivery and Courier industry.jpg" srcset="assets/img/Delivery and Courier industry.jpg 760w, assets/img/Delivery and Courier industry.jpg 1200w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1200" height="800" loading="lazy" decoding="async" alt="Two movers carrying boxes through a bright empty room"></figure>
+      <article class="wc wc--red">
+        <figure class="wc-media"><img src="assets/img/Delivery%20and%20Courier%20industry.jpg" srcset="assets/img/Delivery%20and%20Courier%20industry.jpg 1200w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1200" height="800" loading="lazy" decoding="async" alt="Two movers carrying boxes through a bright empty room"></figure>
         <div class="wc-body">
           <div class="wc-head">
             <span class="wc-ic"><svg class="ic" aria-hidden="true"><use href="#c-moving"/></svg></span>
@@ -656,8 +657,8 @@
           </ul>
         </div>
       </article>
-      <article class="wc wc--cyan r" data-r>
-        <figure class="wc-media"><img src="assets/img/Cleaningfacilities.png" srcset="assets/img/Cleaningfacilities.png 760w, assets/img/work-cleaning-760.webp 1200w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1200" height="800" loading="lazy" decoding="async" alt="A facilities worker cleaning high glass in a bright building"></figure>
+      <article class="wc wc--cyan">
+        <figure class="wc-media"><img src="assets/img/Cleaningfacilities.png" srcset="assets/img/Cleaningfacilities.png 1200w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1200" height="800" loading="lazy" decoding="async" alt="A facilities worker cleaning high glass in a bright building"></figure>
         <div class="wc-body">
           <div class="wc-head">
             <span class="wc-ic"><svg class="ic" aria-hidden="true"><use href="#c-cleaning"/></svg></span>
@@ -675,7 +676,7 @@
           </ul>
         </div>
       </article>
-      <article class="wc wc--yellow r" data-r>
+      <article class="wc wc--yellow">
         <figure class="wc-media"><img src="assets/img/work-education-760.webp" srcset="assets/img/work-education-760.webp 760w, assets/img/work-education-1400.webp 1400w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1400" height="933" loading="lazy" decoding="async" alt="A SAPOTR handing out brochures at a school community event check-in table"></figure>
         <div class="wc-body">
           <div class="wc-head">
@@ -693,7 +694,7 @@
           </ul>
         </div>
       </article>
-      <article class="wc wc--red r" data-r>
+      <article class="wc wc--red">
         <figure class="wc-media"><img src="assets/img/work-general-760.webp" srcset="assets/img/work-general-760.webp 760w, assets/img/work-general-1400.webp 1400w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1400" height="948" loading="lazy" decoding="async" alt="A SAPOTR shaking hands with a business manager on arrival"></figure>
         <div class="wc-body">
           <div class="wc-head">
@@ -716,7 +717,8 @@
         </div>
       </article>
     </div>
-    <div class="dots" id="wc-dots" aria-hidden="true"></div>
+    </div>
+    <div class="dots wc-dots" id="wc-dots" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -724,7 +726,7 @@
 <section class="section" id="safety">
   <div class="wrap">
     <div class="safe-head">
-      <h2 class="sec-title safe-title" data-split>Your Safety Comes First. <span class="hl">Verified Before You Work.</span> Supported While You Work.</h2>
+      <h2 class="sec-title safe-title" data-split><span class="ln">Your Safety Comes First.</span> <span class="ln">Verified Before You Work.</span> <span class="ln">Supported While You Work.</span></h2>
       <span class="safe-badge r" data-r aria-hidden="true"><svg class="ic"><use href="#i-shield"/></svg></span>
     </div>
 
@@ -845,7 +847,7 @@
 <!-- ══════════ 7 · Become a SAPOTR ══════════ -->
 <section class="section" id="become">
   <div class="wrap">
-    <h2 class="sec-title sec-title--center" data-split>Become a <span class="hl">SAPOTR</span> in <span class="hl-red">3</span> Simple Steps</h2>
+    <h2 class="sec-title sec-title--center" data-split>Become a <span class="hl">SAPOTR</span> in 3 Simple Steps</h2>
 
     <ol class="journey" id="journey">
       <li class="step r" data-r>
@@ -963,7 +965,7 @@
 <!-- ══════════ 9 · Final CTA ══════════ -->
 <section class="cta" id="join">
   <div class="cta-media" aria-hidden="true">
-    <img src="assets/img/cta-team-1400.jpg" srcset="assets/img/cta-team-760.jpg 760w, assets/img/cta-team-1400.jpg 1342w"
+    <img src="assets/img/cta-team-1400.jpg" srcset="assets/img/cta-team-1400.jpg 1342w"
          sizes="100vw" width="1342" height="570" alt="" loading="lazy" decoding="async">
     <span class="cta-scrim"></span>
     <svg class="cta-swoosh" viewBox="0 0 600 400" preserveAspectRatio="none">
@@ -974,7 +976,7 @@
   </div>
 
   <div class="wrap cta-inner">
-    <h2 data-split>Ready to <span class="hl">Work, Earn &amp; Grow</span> With SAPOTR?</h2>
+    <h2 data-split>Ready to Work, Earn &amp; Grow With <span class="hl">SAPOTR</span>?</h2>
     <div class="r" data-r>
       <a class="btn btn--accent btn--xl magnet" href="#become">Become a SAPOTR<svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
     </div>

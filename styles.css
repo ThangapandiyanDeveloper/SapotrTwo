@@ -64,7 +64,9 @@ mark{background:none;color:inherit}
 .section--dark h2{color:#fff}
 .section--dark .wrap{position:relative;z-index:1}
 
-.sec-title{font-size:clamp(28px,3.4vw,48px);letter-spacing:-.035em;line-height:1.08;max-width:18ch;margin:0;text-wrap:balance}
+.sec-title{font-size:clamp(28px,3.4vw,48px);letter-spacing:-.035em;line-height:1.08;max-width:26ch;margin:0;text-wrap:balance}
+/* designed line breaks: each phrase on its own line, never split mid-phrase where it fits */
+.sec-title .ln{display:block}
 .sec-title--center{text-align:center;margin-inline:auto}
 
 /* icon tints, shared by every section */
@@ -166,7 +168,8 @@ mark{background:none;color:inherit}
 /* ───── 6 · Hero shell — five stacked banners, one cross-dissolve ───── */
 .hero{--ui-h:24px;--ht:clamp(34px,min(4.6vw,7.2vh),62px);
   position:relative;isolation:isolate;background:var(--navy-deep);color:#fff}
-.hero-stage{position:relative;overflow:hidden;touch-action:pan-y}
+.hero-stage{position:relative;overflow:hidden;touch-action:pan-y pinch-zoom;-webkit-tap-highlight-color:transparent}
+.hero-stage img{-webkit-user-drag:none;user-drag:none;-webkit-touch-callout:none}
 /* a definite height, so every banner composes inside the frame instead of growing it */
 .hero-slides{display:grid;grid-template-areas:"s";grid-template-columns:minmax(0,1fr);height:max(620px,100vh);height:max(620px,100svh)}
 
@@ -182,7 +185,7 @@ mark{background:none;color:inherit}
 .hero-stage.is-dragging .hs{transition:none}
 @media (hover:hover) and (pointer:fine){.hero-stage{cursor:grab}.hero-stage a{cursor:pointer}}
 .hero-stage.is-dragging,.hero-stage.is-dragging a{cursor:grabbing}
-.hero-stage.is-dragging{user-select:none}
+.hero-stage.is-dragging{-webkit-user-select:none;user-select:none}
 
 .hs-bg{position:absolute;inset:0;z-index:-1;overflow:hidden}
 .hs-inner{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;
@@ -589,10 +592,16 @@ mark{background:none;color:inherit}
 /* ───── 12 · Work types — nine category cards ─────
    The category leads (photo, icon, title); the job types follow as
    quieter chips. Each card carries one brand accent. */
-.wt-title .hl,.wt-title .hl-red{display:block}
-.wc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:clamp(32px,4vw,52px)}
+.wc-viewport{--wc-gap:20px;--wc-per:3;margin-top:clamp(22px,3vw,40px);padding:12px 0 22px;overflow:hidden;overflow:clip}
+.wc-grid{display:flex;gap:var(--wc-gap);touch-action:pan-y pinch-zoom;will-change:transform;
+  transition:transform .75s var(--ease)}
+.wc-viewport.is-dragging .wc-grid{-webkit-user-select:none;user-select:none}
+@media (hover:hover) and (pointer:fine){.wc-grid{cursor:grab}.wc-viewport.is-dragging .wc-grid{cursor:grabbing}}
+.wc-grid img{-webkit-user-drag:none;user-drag:none}
+.dots.wc-dots{display:flex;margin-top:4px}
 .wc{--acc:var(--cyan);--acc-soft:rgba(18,199,199,.1);--acc-ink:var(--cyan-ink);
-  position:relative;display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid var(--line);border-radius:var(--r-l);overflow:hidden;
+  position:relative;display:flex;flex-direction:column;min-width:0;flex:0 0 calc((100% - (var(--wc-per) - 1) * var(--wc-gap)) / var(--wc-per));
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-l);overflow:hidden;
   box-shadow:0 1px 2px rgba(15,23,56,.04),0 8px 24px rgba(15,23,56,.04);
   transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .35s var(--ease)}
 .wc--yellow{--acc:var(--yellow);--acc-soft:rgba(255,193,7,.14);--acc-ink:var(--yellow-ink)}
@@ -600,7 +609,7 @@ mark{background:none;color:inherit}
 /* an accent rule that draws across the top on hover */
 .wc::before{content:"";position:absolute;z-index:2;left:0;right:0;top:0;height:3px;background:var(--acc);transform:scaleX(0);transform-origin:left;transition:transform .55s var(--ease)}
 .wc:hover{box-shadow:0 2px 4px rgba(15,23,56,.04),0 24px 50px rgba(15,23,56,.11);border-color:rgba(15,23,56,.1)}
-.wc:hover,.js .wc[data-r].in:hover{transform:translateY(-6px)}
+.wc:hover{transform:translateY(-6px)}
 .wc:hover::before{transform:scaleX(1)}
 .wc-media{position:relative;margin:0;aspect-ratio:16/9;overflow:hidden;background:var(--navy)}
 .wc-media img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
@@ -629,8 +638,7 @@ mark{background:none;color:inherit}
 
 /* ───── 13 · Safety ───── */
 .safe-head{display:flex;align-items:flex-end;justify-content:space-between;gap:30px}
-.safe-title{max-width:20ch}
-.safe-title .hl{display:block}
+.safe-title{max-width:none}
 .safe-badge{position:relative;display:grid;place-items:center;flex:none;width:96px;height:96px;border-radius:28px;
   background:linear-gradient(150deg,var(--navy-2),var(--navy));color:var(--cyan);box-shadow:0 24px 50px rgba(15,23,56,.24)}
 .safe-badge .ic{width:44px;height:44px;stroke-width:1.5}
@@ -742,24 +750,24 @@ mark{background:none;color:inherit}
 .quote blockquote{position:relative;margin:6px 0 0;font-size:clamp(17px,1.45vw,20.5px);font-weight:700;line-height:1.3;letter-spacing:-.02em;color:var(--ink)}
 
 /* ───── 15 · Growing across NZ ───── */
-.grow{padding-block:clamp(60px,6.6vw,96px)}
+.grow{padding-block:clamp(96px,10.5vw,160px)}
 .grow-map{position:absolute;right:-10%;top:0;width:80%;height:100%;opacity:.9;pointer-events:none;
   mask-image:radial-gradient(ellipse 60% 70% at 60% 50%,#000 20%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 60% 70% at 60% 50%,#000 20%,transparent 75%)}
 .glow{position:absolute;border-radius:50%;filter:blur(110px);pointer-events:none;will-change:transform}
 .glow--a{width:520px;height:520px;left:-130px;top:-180px;background:radial-gradient(circle,rgba(18,199,199,.36),transparent 70%);animation:drift-a 34s var(--ease) infinite alternate}
 .glow--b{width:440px;height:440px;right:-120px;bottom:-160px;background:radial-gradient(circle,rgba(255,193,7,.2),transparent 70%);animation:drift-c 40s var(--ease) infinite alternate}
 .grow-head{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
-.grow-head h2{margin:0;font-size:clamp(30px,3.4vw,46px);letter-spacing:-.035em;line-height:1.05}
-.grow-sub{margin:0;max-width:30ch;font-size:clamp(15.5px,1.3vw,18.5px);font-weight:500;line-height:1.5;color:rgba(255,255,255,.7)}
-.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:clamp(30px,3.6vw,48px) 0 0;border-top:1px solid rgba(255,255,255,.14)}
-.stat{position:relative;display:flex;flex-direction:column-reverse;justify-content:flex-end;padding:26px 24px 4px;border-left:1px solid rgba(255,255,255,.12)}
+.grow-head h2{margin:0;font-size:clamp(28px,3vw,42px);letter-spacing:-.035em;line-height:1.08}
+.grow-sub{margin:0;max-width:34ch;font-size:clamp(15px,1.15vw,17px);font-weight:500;line-height:1.5;color:rgba(255,255,255,.7)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:clamp(48px,5.4vw,80px) 0 0;border-top:1px solid rgba(255,255,255,.14)}
+.stat{position:relative;display:flex;flex-direction:column-reverse;justify-content:flex-end;padding:30px 24px 6px;border-left:1px solid rgba(255,255,255,.12)}
 .stat:first-child{border-left:0;padding-left:0}
 .stat::before{content:"";position:absolute;top:-2px;left:24px;width:44px;height:3px;border-radius:2px;background:var(--acc);box-shadow:0 0 18px var(--acc)}
 .stat:first-child::before{left:0}
 .stat--c{--acc:var(--cyan)} .stat--y{--acc:var(--yellow)} .stat--r{--acc:var(--red)}
-.stat dd{margin:0;font-size:clamp(32px,3.2vw,46px);font-weight:800;line-height:1;letter-spacing:-.04em;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
+.stat dd{margin:0;font-size:clamp(30px,2.9vw,42px);font-weight:800;line-height:1;letter-spacing:-.04em;color:#fff;font-variant-numeric:tabular-nums;white-space:nowrap}
 .stat dd i{font-style:normal;color:var(--acc);margin-left:2px}
-.stat dt{margin-top:10px;font-size:13.5px;font-weight:600;letter-spacing:.005em;color:rgba(255,255,255,.64)}
+.stat dt{margin-top:10px;font-size:13px;font-weight:600;letter-spacing:.005em;color:rgba(255,255,255,.64)}
 
 /* ───── 16 · Become a SAPOTR ───── */
 .journey{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,2.4vw,30px);margin-top:clamp(34px,4vw,54px)}
@@ -875,7 +883,7 @@ mark{background:none;color:inherit}
 .cta-swoosh path{opacity:.3}
 .cta-inner{position:relative}
 .cta h2{margin:0 0 clamp(24px,3vw,36px);max-width:14ch;color:#fff;font-size:clamp(30px,3.6vw,52px);letter-spacing:-.04em;line-height:1.04;text-wrap:balance}
-.cta h2 .hl{color:var(--yellow)}
+.cta h2 .hl{color:var(--cyan)}
 
 /* ───── 19 · Footer ───── */
 .site-footer{background:var(--navy);color:rgba(255,255,255,.62);padding:60px 0 28px;font-size:14.5px;border-top:1px solid rgba(255,255,255,.08)}
@@ -928,7 +936,7 @@ mark{background:none;color:inherit}
       "safety app app"
       "career app app"}
   .safe-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .wc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .wc-viewport{--wc-per:2}
   .foot-contact{grid-template-columns:1fr 1fr}
   .loop{--size:250px}
 }
@@ -1107,12 +1115,10 @@ mark{background:none;color:inherit}
   .viz-steps b{left:94px}
 
   /* work types: a deck you swipe through */
-  .wt-title .hl,.wt-title .hl-red{display:inline}
-  .wc-grid{display:flex;gap:12px;margin-top:26px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;
-    padding:4px 16px 10px;margin-inline:-16px;scroll-padding-inline:16px}
-  .wc-grid::-webkit-scrollbar{display:none}
-  .wc{flex:0 0 82vw;max-width:340px;scroll-snap-align:start}
-  .wc:hover,.js .wc[data-r].in:hover{transform:none}
+  /* phone: the rail runs to the screen edge, one wide card with the next peeking in */
+  .wc-viewport{--wc-gap:12px;margin-inline:-16px;padding-inline:16px;margin-top:18px}
+  .wc{flex:0 0 min(82vw,340px)}
+  .wc:hover{transform:none}
   .wc-body{padding:0 18px 20px}
   .wc-ic{width:46px;height:46px;border-radius:13px}
   .wc-ic .ic{width:22px;height:22px}
@@ -1147,13 +1153,14 @@ mark{background:none;color:inherit}
   .why-swoosh{width:100%;height:40%;bottom:0;right:-20%}
 
   /* growth */
-  .grow-head h2{font-size:clamp(28px,8vw,34px)}
-  .grow-sub{font-size:16px}
-  .stats{margin-top:26px}
+  .grow{padding-block:clamp(72px,19vw,96px)}
+  .grow-head h2{font-size:clamp(26px,7.4vw,32px)}
+  .grow-sub{font-size:15px}
+  .stats{margin-top:36px}
   .stat{padding:20px 14px 16px}
   .stat:nth-child(odd){padding-left:0}
   .stat::before{left:14px;width:32px}
-  .stat dd{font-size:clamp(28px,8.2vw,34px)}
+  .stat dd{font-size:clamp(26px,7.6vw,32px)}
   .stat dt{margin-top:8px;font-size:13px}
 
   /* become */
@@ -1200,7 +1207,8 @@ mark{background:none;color:inherit}
   .wt{font-size:12.5px}
   .bento{grid-template-areas:"earn earn" "flex any" "flex area" "variety nosearch" "app app" "safety career"}
   .foot-contact{grid-template-columns:1fr}
-  .wc-grid,.safe-grid{margin-inline:-14px;padding-inline:14px;scroll-padding-inline:14px}
+  .wc-viewport{margin-inline:-14px;padding-inline:14px}
+  .safe-grid{margin-inline:-14px;padding-inline:14px;scroll-padding-inline:14px}
 }
 /* short landscape screens: keep every banner inside the frame */
 @media (max-height:560px) and (min-aspect-ratio:1/1){

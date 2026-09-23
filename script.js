@@ -1,7 +1,7 @@
 /* ═══════════════════════════════════════════════════════════
    SAPOTR — landing page behaviour (vanilla JS, no libraries)
     1 Helpers            7 Count-up numbers
-    2 Header + nav       8 Work types (CSS)
+    2 Header + nav       8 Work types rail
     3 Reveals + split    9 Swipe dots (mobile decks)
     4 Scroll FX         10 FAQ accordion
     5 Hero carousel     11 Journey + section cues
@@ -633,12 +633,146 @@
     }, { threshold: 0.6 });
   });
 
-  /* ───── 8 · Work types: cards reveal on scroll; on phones they become
-     a swipeable deck with dots (section 9) ───── */
+  /* ───── 8 · Work types rail ─────
+     One engine for every screen: three cards on a desktop, two on a
+     tablet, one wide card with a peek on a phone (all set in CSS —
+     the script only measures). The track moves by transform, one card
+     at a time; at the end it rewinds to the start, so no clones.
+     A single interval runs for the life of the page and simply skips
+     its turn while the rail is held (hover, a drag, a recent gesture),
+     off screen or in a hidden tab — nothing else creates a timer. */
+  (function workRail() {
+    var vp = $('#wc-viewport');
+    var track = $('#wc-grid');
+    var dotsBox = $('#wc-dots');
+    if (!vp || !track) return;
+    var cards = $$('.wc', track);
+    var INTERVAL = 4200;   /* the pace, as on the Demo 1 industry rail */
+    var HOLD = 5000;       /* how long a touched rail is left alone */
 
-  /* ───── 9 · Swipe dots for the mobile decks (work types, safety) ───── */
+    var at = 0, last = 0, step = 0, maxOff = 0, holdUntil = 0;
+    var hovering = false, onScreen = false, dragging = false;
+    var dots = [];
+
+    function offsetFor(i) { return Math.min(i * step, maxOff); }
+    function place(px, animate) {
+      track.style.transition = animate ? '' : 'none';
+      track.style.transform = 'translate3d(' + (-px).toFixed(1) + 'px,0,0)';
+    }
+    function paintDots() {
+      dots.forEach(function (d, i) { d.setAttribute('aria-selected', String(i === at)); });
+    }
+    function go(i, animate) {
+      at = Math.max(0, Math.min(last, i));
+      place(offsetFor(at), animate !== false);
+      paintDots();
+    }
+    function hold() { holdUntil = Date.now() + HOLD; }
+
+    function measure() {
+      var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+      var cs = getComputedStyle(vp);
+      var inner = vp.clientWidth - (parseFloat(cs.paddingLeft) || 0) - (parseFloat(cs.paddingRight) || 0);
+      step = cards[0].getBoundingClientRect().width + gap;
+      maxOff = Math.max(0, cards.length * step - gap - inner);
+      last = step ? Math.ceil(maxOff / step - 0.01) : 0;
+      /* one dot per resting position */
+      if (dotsBox && dots.length !== last + 1) {
+        dotsBox.innerHTML = '';
+        dots = [];
+        for (var i = 0; i <= last; i++) {
+          var b = document.createElement('button');
+          b.type = 'button';
+          b.tabIndex = -1;
+          b.setAttribute('aria-label', 'Go to ' + (i + 1) + ' of ' + (last + 1));
+          b.addEventListener('click', (function (n) { return function () { hold(); go(n); }; })(i));
+          dotsBox.appendChild(b);
+          dots.push(b);
+        }
+      }
+      go(at, false);
+    }
+
+    /* ---- drag / swipe: sideways moves the rail, vertical scrolls the page ---- */
+    var down = false, decided = false, mine = false, moved = false, x0 = 0, y0 = 0, dx = 0, t0 = 0, pid = null;
+    vp.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      down = true; decided = false; mine = false; moved = false;
+      x0 = e.clientX; y0 = e.clientY; dx = 0; t0 = Date.now(); pid = e.pointerId;
+    });
+    vp.addEventListener('pointermove', function (e) {
+      if (!down || e.pointerId !== pid) return;
+      dx = e.clientX - x0;
+      var dy = e.clientY - y0;
+      if (!decided) {
+        if (Math.abs(dx) < 8 && Math.abs(dy) < 8) return;
+        decided = true;
+        mine = Math.abs(dx) > Math.abs(dy);
+        if (!mine) { down = false; return; }
+        dragging = true;
+        vp.classList.add('is-dragging');
+        if (e.pointerType === 'mouse') { try { vp.setPointerCapture(pid); } catch (err) { /* fine without */ } }
+      }
+      moved = true;
+      /* resist past either end, so the edges feel like edges */
+      var off = offsetFor(at) - dx;
+      if (off < 0) off *= 0.3;
+      else if (off > maxOff) off = maxOff + (off - maxOff) * 0.3;
+      place(off, false);
+    });
+    function release(e) {
+      if (!down || (e && e.pointerId !== pid)) return;
+      down = false;
+      if (!mine) return;
+      mine = false; dragging = false;
+      vp.classList.remove('is-dragging');
+      hold();
+      var speed = Math.abs(dx) / Math.max(1, Date.now() - t0);
+      var n = Math.round(Math.abs(dx) / step);
+      if (!n && (Math.abs(dx) > 40 || (Math.abs(dx) > 20 && speed > 0.35))) n = 1;
+      go(at + (dx < 0 ? n : -n));
+    }
+    vp.addEventListener('pointerup', release);
+    vp.addEventListener('pointercancel', release);
+    vp.addEventListener('click', function (e) { if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; } }, true);
+    vp.addEventListener('dragstart', function (e) { e.preventDefault(); });
+
+    /* a sideways two-finger swipe on a trackpad moves one card */
+    var acc = 0, lock = 0;
+    vp.addEventListener('wheel', function (e) {
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+      e.preventDefault();
+      hold();
+      if (Date.now() < lock) return;
+      acc += e.deltaX;
+      if (Math.abs(acc) > 50) { go(at + (acc > 0 ? 1 : -1)); acc = 0; lock = Date.now() + 600; }
+    }, { passive: false });
+
+    if (fine) {
+      vp.addEventListener('mouseenter', function () { hovering = true; });
+      vp.addEventListener('mouseleave', function () { hovering = false; hold(); });
+    }
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; }, { threshold: 0.35 }).observe(vp);
+    } else { onScreen = true; }
+
+    /* the one clock: move a card, or rewind from the end */
+    if (!reduced) {
+      setInterval(function () {
+        if (!onScreen || hovering || dragging || document.hidden || Date.now() < holdUntil) return;
+        go(at >= last ? 0 : at + 1);
+      }, INTERVAL);
+    }
+
+    measure();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+    window.addEventListener('resize', debounce(measure, 150));
+    window.SAPOTR.workRail = { go: go, at: function () { return at; }, last: function () { return last; } };
+  })();
+
+  /* ───── 9 · Swipe dots for the mobile safety deck ───── */
   (function swipeDots() {
-    [['#wc-grid', '#wc-dots', '.wc'], ['#safe-grid', '#safe-dots', '.safe']].forEach(function (set) {
+    [['#safe-grid', '#safe-dots', '.safe']].forEach(function (set) {
       var box = $(set[0]), holder = $(set[1]);
       if (!box || !holder) return;
       var items = $$(set[2], box);
