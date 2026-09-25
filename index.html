@@ -33,7 +33,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Josefin+Sans:wght@600&family=Oswald:wght@500&family=Pacifico&family=Playfair+Display:ital,wght@1,700&family=Quicksand:wght@600&family=Roboto+Slab:wght@600&family=Saira+Condensed:wght@700&display=swap&text=%20%26ABCDEFGHIJKLMNOPQRSTUVWXYZacdeghilmnoprstuvy" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="top">
 
 <a class="skip-link" href="#main">Skip to content</a>
 
@@ -83,6 +83,12 @@
   <symbol id="i-support" viewBox="0 0 24 24"><path d="M4.5 13.5v-1.5a7.5 7.5 0 0115 0v1.5"/><path d="M4.5 13.5h3v5h-2a1 1 0 01-1-1zM19.5 13.5h-3v5h2a1 1 0 001-1z"/></symbol>
   <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3.5c.9 4.6 2.6 6.3 7.2 7.2-4.6.9-6.3 2.6-7.2 7.2-.9-4.6-2.6-6.3-7.2-7.2 4.6-.9 6.3-2.6 7.2-7.2z"/></symbol>
   <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 016.5 3H20v15H6.5A2.5 2.5 0 004 20.5z"/><path d="M4 20.5A2.5 2.5 0 016.5 18H20v3H6.5"/></symbol>
+  <!-- stores + social (glyphs are filled, not stroked) -->
+  <symbol id="s-apple" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></symbol>
+  <symbol id="s-play" viewBox="0 0 24 24"><path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.25-.84-.76-.84-1.35m13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27m3.35-4.31c.34.27.59.69.59 1.19s-.22.9-.57 1.18l-2.29 1.32-2.5-2.5 2.5-2.5 2.27 1.31M6.05 2.66l10.76 6.22-2.27 2.27-8.49-8.49z"/></symbol>
+  <symbol id="s-facebook" viewBox="0 0 24 24"><path d="M13.5 21.5v-8.2h2.8l.42-3.26H13.5V7.96c0-.94.26-1.58 1.61-1.58h1.72V3.47c-.3-.04-1.32-.13-2.5-.13-2.48 0-4.18 1.51-4.18 4.29v2.4H7.35v3.26h2.8v8.2z"/></symbol>
+  <symbol id="s-instagram" viewBox="0 0 24 24"><path d="M12 7.2A4.8 4.8 0 1012 16.8 4.8 4.8 0 0012 7.2m0 7.9a3.1 3.1 0 110-6.2 3.1 3.1 0 010 6.2M17.1 5.8a1.1 1.1 0 100 2.2 1.1 1.1 0 000-2.2M12 4.1c2.57 0 2.87.01 3.88.06 2.61.12 3.83 1.36 3.95 3.95.05 1.01.06 1.31.06 3.89s-.01 2.88-.06 3.89c-.12 2.59-1.34 3.83-3.95 3.95-1.01.05-1.31.06-3.88.06s-2.88-.01-3.89-.06c-2.62-.12-3.83-1.37-3.95-3.95C4.11 14.88 4.1 14.58 4.1 12s.01-2.88.06-3.89c.12-2.59 1.34-3.83 3.95-3.95C9.12 4.11 9.43 4.1 12 4.1m0-1.7c-2.61 0-2.94.01-3.97.06-3.49.16-5.43 2.1-5.59 5.59C2.41 9.06 2.4 9.39 2.4 12s.01 2.94.06 3.97c.16 3.49 2.1 5.43 5.59 5.59 1.03.05 1.36.06 3.97.06s2.94-.01 3.97-.06c3.48-.16 5.44-2.1 5.59-5.59.05-1.03.06-1.36.06-3.97s-.01-2.94-.06-3.97c-.16-3.48-2.1-5.43-5.59-5.59C14.94 2.41 14.61 2.4 12 2.4"/></symbol>
+  <symbol id="s-linkedin" viewBox="0 0 24 24"><path d="M5.34 3.5a1.95 1.95 0 110 3.9 1.95 1.95 0 010-3.9M3.66 8.86h3.36V20.5H3.66zM9.1 8.86h3.22v1.6h.05c.45-.85 1.54-1.74 3.18-1.74 3.4 0 4.03 2.24 4.03 5.15v6.63h-3.36v-5.88c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1v5.98H9.1z"/></symbol>
   <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 11.5V5.8a1.6 1.6 0 013.2 0v4.7-6.3a1.6 1.6 0 013.2 0v6.3-4.7a1.6 1.6 0 013.2 0v8.4c0 4-2.6 6.8-6.3 6.8-2.3 0-3.7-.9-5-2.6L3.8 13a1.7 1.7 0 012.7-2z"/></symbol>
 </svg>
 
@@ -96,7 +102,7 @@
 </div>
 
 <!-- ══════════ Header ══════════ -->
-<header class="site-header" id="top" data-mode="over" data-tone="dark">
+<header class="site-header" data-mode="over" data-tone="dark">
   <div class="wrap header-inner">
     <a class="brand" href="#top" aria-label="SAPOTR — back to top">
       <img class="brand-dark"  src="assets/logo-wordmark.png"       alt="SAPOTR" width="118" height="29">
@@ -384,11 +390,13 @@
             <img class="b5-mark" data-seq="2" src="assets/img/logo-mark-256.webp" alt="" width="256" height="202" aria-hidden="true">
           </div>
           <figure class="b5-photo" data-seq="3">
-            <img src="assets/img/hero-team-1400.jpg" srcset="assets/img/hero-team-1400.jpg 1318w"
-                 sizes="(max-width:1300px) 100vw, 1240px" width="1318" height="514" decoding="async" fetchpriority="low"
-                 alt="A line of SAPOTRs giving a thumbs up on the Auckland waterfront, the Sky Tower behind them">
+            <div class="b5-frame">
+              <img src="assets/img/hero-team-1400.png" srcset="assets/img/hero-team-1400.png 1318w"
+                   sizes="(max-width:1300px) 100vw, 1240px" width="1318" height="514" decoding="async" fetchpriority="low"
+                   alt="A line of SAPOTRs giving a thumbs up on the Auckland waterfront, the Sky Tower behind them">
+            </div>
             <div class="hs-cta b5-cta">
-              <a class="btn btn--gold btn--xl magnet" href="#become"><span>SUPPORT DELIVERED.</span> <span>BY SAPOTRs</span></a>
+              <a class="btn btn--gold btn--xl magnet" href="#become">Support Delivered by SAPOTRs</a>
             </div>
           </figure>
         </div>
@@ -396,6 +404,13 @@
 
     </div>
 
+    <!-- small arrows: one banner per click; autoplay and swipe still run -->
+    <div class="hero-arrows">
+      <div class="wrap hero-arrows-in">
+        <button class="c-arrow" id="hero-prev" type="button" aria-label="Previous banner" aria-controls="hero-slides"><svg class="ic" aria-hidden="true"><use href="#i-chev-l"/></svg></button>
+        <button class="c-arrow" id="hero-next" type="button" aria-label="Next banner" aria-controls="hero-slides"><svg class="ic" aria-hidden="true"><use href="#i-chev-r"/></svg></button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -480,7 +495,7 @@
         <span class="tile-ic ic-red"><svg class="ic" aria-hidden="true"><use href="#i-nosearch"/></svg></span>
         <h3>No Job Searching &amp; Waiting</h3>
         <p>No job boards, applications, calls or waiting for employers.</p>
-        <span class="viz viz-strike" aria-hidden="true"><s>job boards</s><s>applications</s><s>calls</s><s>waiting</s></span>
+        <span class="viz viz-strike" aria-hidden="true"><span>job boards</span><span>applications</span><span>calls</span><span>waiting</span></span>
       </article>
 
       <!-- 7 · the loop, drawn as a cycle round the SAPOTR mark -->
@@ -695,7 +710,7 @@
         </div>
       </article>
       <article class="wc wc--red">
-        <figure class="wc-media"><img src="assets/img/work-general-760.webp" srcset="assets/img/work-general-760.webp 760w, assets/img/work-general-1400.webp 1400w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1400" height="948" loading="lazy" decoding="async" alt="A SAPOTR shaking hands with a business manager on arrival"></figure>
+        <figure class="wc-media"><img src="assets/img/work-general-760.png" srcset="assets/img/work-general-760.png 760w, assets/img/work-general-1400.webp 1400w" sizes="(max-width:680px) 82vw, (max-width:1100px) 46vw, 400px" width="1400" height="948" loading="lazy" decoding="async" alt="A SAPOTR shaking hands with a business manager on arrival"></figure>
         <div class="wc-body">
           <div class="wc-head">
             <span class="wc-ic"><svg class="ic" aria-hidden="true"><use href="#c-general"/></svg></span>
@@ -718,7 +733,11 @@
       </article>
     </div>
     </div>
-    <div class="dots wc-dots" id="wc-dots" aria-hidden="true"></div>
+    <div class="rail-ui">
+      <button class="c-arrow" id="wc-prev" type="button" aria-label="Previous work type" aria-controls="wc-grid"><svg class="ic" aria-hidden="true"><use href="#i-chev-l"/></svg></button>
+      <div class="dots wc-dots" id="wc-dots" aria-hidden="true"></div>
+      <button class="c-arrow" id="wc-next" type="button" aria-label="Next work type" aria-controls="wc-grid"><svg class="ic" aria-hidden="true"><use href="#i-chev-r"/></svg></button>
+    </div>
   </div>
 </section>
 
@@ -965,7 +984,7 @@
 <!-- ══════════ 9 · Final CTA ══════════ -->
 <section class="cta" id="join">
   <div class="cta-media" aria-hidden="true">
-    <img src="assets/img/cta-team-1400.jpg" srcset="assets/img/cta-team-1400.jpg 1342w"
+    <img src="assets/img/cta-team-1400.png" srcset="assets/img/cta-team-1400.png 1342w"
          sizes="100vw" width="1342" height="570" alt="" loading="lazy" decoding="async">
     <span class="cta-scrim"></span>
     <svg class="cta-swoosh" viewBox="0 0 600 400" preserveAspectRatio="none">
@@ -992,6 +1011,17 @@
       <div class="foot-brand">
         <img src="assets/logo-wordmark-light.png" alt="SAPOTR" width="140" height="34" loading="lazy">
         <p>NZ’s Last-Minute Staff Support Platform.</p>
+        <!-- store links: replace each href with the live listing when the apps are published -->
+        <div class="foot-apps">
+          <a class="store" href="#" data-placeholder aria-label="Download from App Store">
+            <svg class="ic" aria-hidden="true"><use href="#s-apple"/></svg>
+            <span><small>Download from</small><b>App Store</b></span>
+          </a>
+          <a class="store" href="#" data-placeholder aria-label="Download from Google Play">
+            <svg class="ic" aria-hidden="true"><use href="#s-play"/></svg>
+            <span><small>Download from</small><b>Google Play</b></span>
+          </a>
+        </div>
       </div>
 
       <nav class="foot-jump" aria-label="Jump to a section">
@@ -1027,7 +1057,15 @@
 
     <div class="foot-bottom">
       <p class="copy">© <span id="year">2026</span> SAPOTR Pvt Ltd. All rights reserved.</p>
-      <a class="foot-top-link" href="#top">Back to top<svg class="ic" aria-hidden="true"><use href="#i-chev-r"/></svg></a>
+      <div class="foot-end">
+        <!-- social links: replace each href with the live profile URL -->
+        <ul class="foot-social" aria-label="SAPOTR on social media">
+          <li><a class="social" href="#" data-placeholder aria-label="SAPOTR on Facebook" title="Facebook"><svg class="ic" aria-hidden="true"><use href="#s-facebook"/></svg></a></li>
+          <li><a class="social" href="#" data-placeholder aria-label="SAPOTR on Instagram" title="Instagram"><svg class="ic" aria-hidden="true"><use href="#s-instagram"/></svg></a></li>
+          <li><a class="social" href="#" data-placeholder aria-label="SAPOTR on LinkedIn" title="LinkedIn"><svg class="ic" aria-hidden="true"><use href="#s-linkedin"/></svg></a></li>
+        </ul>
+        <a class="foot-top-link" href="#top">Back to top<svg class="ic" aria-hidden="true"><use href="#i-chev-r"/></svg></a>
+      </div>
     </div>
   </div>
 </footer>

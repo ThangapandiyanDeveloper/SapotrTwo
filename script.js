@@ -285,9 +285,14 @@
     /* keyboard focus inside the banner holds it, so nobody is moved on mid-sentence */
     stage.addEventListener('focusin', function (e) { if (e.target.matches(':focus-visible')) hold('focus', true); });
     stage.addEventListener('focusout', function () { hold('focus', false); });
-    /* hovering a button means a click is coming */
+    /* the small arrows: one banner per click; a manual move resets the clock */
+    var prevBtn = $('#hero-prev'), nextBtn = $('#hero-next');
+    if (prevBtn) prevBtn.addEventListener('click', function () { go(index - 1, true); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { go(index + 1, true); });
+
+    /* hovering a button or an arrow means a click is coming */
     if (fine) {
-      $$('.hs-cta', stage).forEach(function (el) {
+      $$('.hs-cta, .hero-arrows-in', stage).forEach(function (el) {
         el.addEventListener('mouseenter', function () { hold('hover', true); });
         el.addEventListener('mouseleave', function () { hold('hover', false); });
       });
@@ -359,6 +364,7 @@
       if (window.PointerEvent) {
         stage.addEventListener('pointerdown', function (e) {
           if (e.pointerType === 'mouse' && e.button !== 0) return;
+          if (e.target.closest('.c-arrow')) return;          /* an arrow is a click, never a drag */
           begin(e.clientX, e.clientY, e.pointerId);
         });
         stage.addEventListener('pointermove', function (e) {
@@ -545,7 +551,7 @@
       var copy = relRect($('.hs-copy', slide));
       var cta = relRect($('.hs-cta .btn', slide));
       var headH = header.offsetHeight + 24;
-      var uiH = 16;   /* no controls bar any more, just breathing room at the foot */
+      var uiH = 64;   /* the small arrow row at the foot of the banner */
       var pad = 24;   /* .hmap bleeds 24px past the slide on every side */
       var safe = side
         ? { l: Math.max(copy.r, cta.r) + 32, t: headH + pad, r: W - pad - 20, b: H - pad - uiH - 8 }
@@ -756,6 +762,12 @@
       new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; }, { threshold: 0.35 }).observe(vp);
     } else { onScreen = true; }
 
+    /* the small arrows: exactly one card per click; past either end they wrap,
+       the same way the autoplay rewinds */
+    var railPrev = $('#wc-prev'), railNext = $('#wc-next');
+    if (railPrev) railPrev.addEventListener('click', function () { hold(); go(at <= 0 ? last : at - 1); });
+    if (railNext) railNext.addEventListener('click', function () { hold(); go(at >= last ? 0 : at + 1); });
+
     /* the one clock: move a card, or rewind from the end */
     if (!reduced) {
       setInterval(function () {
@@ -877,6 +889,20 @@
     var row = $('.viz-cats-row');
     if (row) row.innerHTML += row.innerHTML;
   })();
+
+  /* ───── Back to top ─────
+     Both the header logo and the footer link point at #top. One delegated
+     listener scrolls there smoothly and leaves the URL alone. Links marked
+     data-placeholder (store badges, social icons awaiting their live URLs)
+     simply do nothing instead of jumping to the top of the page. */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href="#top"], a[data-placeholder]');
+    if (!a) return;
+    e.preventDefault();
+    if (a.hasAttribute('data-placeholder')) return;
+    window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' });
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+  });
 
   /* ───── Misc ───── */
   var year = $('#year');
